@@ -1,0 +1,131 @@
+// GLOBAL RESET
+
+body {
+	box-sizing: border-box;
+
+	font-family: $primary-font;
+	font-size: 16px;
+	color: $text-black;
+
+	background-color: $bg-white;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	display: inline-block;
+
+	color: inherit;
+	text-decoration: none;
+
+	transition-duration: 250ms;
+	transition-timing-function: ease;
+}
+
+button {
+	display: inline-block;
+
+	padding: 0;
+	border: 0;
+	outline: 0;
+	margin: 0;
+
+	box-shadow: 0px;
+	background-color: transparent;
+
+	font-family: inherit;
+	color: inherit;
+	fill: currentColor;
+
+	cursor: pointer;
+	transition-duration: 250ms;
+	transition-timing-function: ease;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+	color: inherit;
+}
+
+ul {
+	padding: 0px;
+	margin: 0px;
+
+	list-style: none;
+}
+
+address {
+	font-style: normal;
+}
+
+// container
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+
+	@media screen and (min-width: $mobile) {
+		width: 480px;
+		padding: 0px 20px;
+	}
+	@media screen and (min-width: $tablet) {
+		width: 768px;
+		padding: 0px 32px;
+	}
+	@media screen and (min-width: $desktop) {
+		width: 1280px;
+		padding: 0px 16px;
+	}
+}
+
+// title
+
+.section-title {
+	font-family: $title-font;
+	font-weight: 400;
+	font-size: 58px;
+	line-height: 1.13;
+	letter-spacing: 0.06em;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: $title-red;
+}
+
+.section-label {
+	font-family: $title-font;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 1.13;
+	letter-spacing: 0.04em;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: $title-rose;
+}
+
+// is-hidden
+
+.is-hidden {
+	visibility: hidden;
+	position: absolute;
+	top: -100%;
+
+	pointer-events: none;
+}

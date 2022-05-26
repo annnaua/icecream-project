@@ -1,0 +1,74 @@
+// BUTTONS
+
+%button {
+	font-family: $primary-font;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.3;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 10px;
+
+	text-align: center;
+}
+
+// button-hero
+
+.button-hero-white {
+	@extend %button;
+
+	font-size: 14px;
+	line-height: 1.3;
+
+	background-color: $button-bg-white;
+	color: $text-red;
+
+	&:hover,
+	&:focus {
+		background-color: $button-bg-white-hover;
+	}
+}
+
+.button-hero-red {
+	@extend %button;
+
+	font-size: 14px;
+	line-height: 1.3;
+
+	background-color: $button-bg-red;
+	color: $text-white;
+
+	&:hover,
+	&:focus {
+		background-color: $button-bg-white-hover;
+	}
+}
+
+// button
+
+.button-white {
+	@extend %button;
+
+	background-color: $button-bg-white;
+	color: $text-red;
+
+	&:hover,
+	&:focus {
+		background-color: $button-bg-white-hover;
+	}
+}
+
+.button-red {
+	@extend %button;
+
+	background-color: $button-bg-red;
+	color: $text-white;
+
+	&:hover,
+	&:focus {
+		background-color: $button-bg-red-hover;
+	}
+}

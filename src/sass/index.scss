@@ -1,2 +1,29 @@
-@import './common';
-@import './example';
+// @import './common';
+// @import './example';
+
+// UTILS
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/global';
+
+// COMPONENTS
+@import './components/buttons';
+
+// LAYOUT
+
+// hero-header
+@import './layout/section-hero-header';
+// section products
+@import './layout/section-products';
+// section about
+@import './layout/section-about';
+// section advantages
+@import './layout/section-advantages';
+// section gallery
+@import './layout/section-gallery';
+// section reviews
+@import './layout/section-reviews';
+// section contacts
+@import './layout/section-contacts';
+// footer
+@import './layout/section-footer';
