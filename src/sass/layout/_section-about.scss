@@ -1,0 +1,30 @@
+.about {
+  display: block;
+  background-color: $bg-rose-light;
+}
+.about-container {
+  @media screen and (max-width: 767.9px) {
+    background-image: url('../images/mobile/about2-img-mobile.png');
+    background-repeat: no-repeat;
+    background-position: 0 80%;
+    background-size: auto;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/mobile/about2-img-mobile@2x.png');
+    }
+  }
+}
+.about-content {
+  width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  margin-top: 40px;
+}
+.about-second-content {
+  display: block;
+  color: $text-rose-gray;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
