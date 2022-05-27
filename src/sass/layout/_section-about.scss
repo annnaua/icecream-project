@@ -1,0 +1,37 @@
+.about {
+  display: block;
+  background-color: $bg-rose-light;
+}
+.about-container {
+  @media screen and (max-width: 767.9px) {
+    background-image: url('../images/mobile/about2-img-mobile.png');
+    background-repeat: no-repeat;
+    background-position: 0 78%;
+    background-size: contain;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/mobile/about2-img-mobile@2x.png');
+    }
+  }
+}
+.about-content {
+  width: 78%;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  margin-top: 40px;
+}
+.about-second-content {
+  display: block;
+  color: $text-rose-gray;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.about-img {
+  width: 100%;
+  margin: 0 auto;
+}
+.svg-img {
+  margin-left: 14px;
+}
