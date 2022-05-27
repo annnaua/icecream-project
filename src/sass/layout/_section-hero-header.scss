@@ -1,0 +1,48 @@
+.hero{
+    background-color: $bg-hero;
+    background-image: url("../images/mobile/hero-cream-img-mobile.png"), url('../images/mobile/hero-circle-img-mobile.png');
+    background-repeat: no-repeat;
+    background-position: right 32px bottom 0, right 0 bottom 75px;
+    background-size: 171px 410px, 284px 344px;
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) 
+        {
+        background-image: url("../images/mobile/hero-cream-img-mobile@2x.png"),
+            url('../images/mobile/hero-circle-img-mobile@2x.png');
+     }
+}
+
+.hero-container{
+    padding-top: 83px;
+    padding-bottom: 158px;
+}
+
+.hero-title{
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $white;
+    margin-top: 111px;
+}
+
+.hero-title-other{
+    font-size: 48px;
+    line-height: 0.965;
+    color: $title-red;
+    max-width: 218px;
+  }
+
+.header-wrapper{
+    display: flex;
+    margin-top: 20px;
+}
+
+.margin-left{
+    margin-left: 8px;
+}
