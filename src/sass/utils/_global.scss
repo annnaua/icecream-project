@@ -77,10 +77,10 @@ address {
 .container {
   width: 100%;
   margin: 0 auto;
-
+  padding: 0px 20px;
+  
   @media screen and (min-width: $mobile) {
     width: 480px;
-    padding: 0px 20px;
   }
   @media screen and (min-width: $tablet) {
     width: 768px;
