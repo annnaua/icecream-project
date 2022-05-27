@@ -6,7 +6,7 @@
   @media screen and (max-width: 767.9px) {
     background-image: url('../images/mobile/about2-img-mobile.png');
     background-repeat: no-repeat;
-    background-position: 0 83%;
+    background-position: 0 78%;
     background-size: contain;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -31,4 +31,7 @@
 .about-img {
   width: 100%;
   margin: 0 auto;
+}
+.svg-img {
+  margin-left: 14px;
 }
