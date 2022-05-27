@@ -92,32 +92,56 @@ address {
   }
 }
 
+// section
+
+.section-container {
+  padding: 40px 0px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 60px 0px;
+  }
+}
+
 // title
 
 .section-title {
   font-family: $title-font;
   font-weight: 400;
-  font-size: 58px;
-  line-height: 1.13;
+  font-size: 34px;
+  line-height: 1.15;
   letter-spacing: 0.06em;
 
   text-align: center;
   text-transform: uppercase;
 
   color: $title-red;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+  }
 }
 
 .section-label {
   font-family: $title-font;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 1.13;
+  font-size: 18px;
+  line-height: 1.16;
   letter-spacing: 0.04em;
 
   text-align: center;
   text-transform: uppercase;
 
   color: $title-rose;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+  }
 }
 
 // is-hidden
