@@ -80,4 +80,8 @@
   font-size: 12px;
   line-height: 1.67;
   color: $text-black;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
