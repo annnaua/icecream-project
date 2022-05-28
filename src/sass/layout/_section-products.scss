@@ -1,0 +1,61 @@
+.product-item {
+  position: relative;
+  padding-top: 140px;
+  width: 100%;
+  height: 629px;
+}
+
+%product-box {
+  width: 100%;
+  height: 489px;
+  padding-right: 41px;
+  padding-bottom: 40px;
+  padding-left: 39px;
+  padding-top: 160px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.product-box-first {
+  @extend %product-box;
+
+  background-color: $bg-hero;
+}
+
+.product-box-second {
+  @extend %product-box;
+
+  background-color: $accent-yellow;
+}
+
+.product-box-third {
+  @extend %product-box;
+
+  background-color: $accent-green;
+}
+
+.product-title {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white;
+}
+.product-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: $white;
+
+  &::after {
+    content: '';
+  }
+}
+
+.contact-img {
+  position: absolute;
+  top: 0;
+}
