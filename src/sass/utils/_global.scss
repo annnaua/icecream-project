@@ -84,11 +84,10 @@ address {
   }
   @media screen and (min-width: $tablet) {
     width: 768px;
-    padding: 0px 32px;
+    padding: 0px 16px;
   }
   @media screen and (min-width: $desktop) {
     width: 1280px;
-    padding: 0px 16px;
   }
 }
 
