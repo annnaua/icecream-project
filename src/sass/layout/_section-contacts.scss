@@ -91,7 +91,7 @@
 }
 
 .city-wrap-text {
-  width: 179px;
+  max-width: 179px;
 
   color: $text-rose-gray;
   font-weight: 500;
@@ -99,7 +99,7 @@
   line-height: 1.5;
 
   @media screen and (min-width: $tablet) {
-    width: 159px;
+    width: 100%;
     font-size: 14px;
   }
 }
