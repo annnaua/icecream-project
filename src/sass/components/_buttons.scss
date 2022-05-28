@@ -49,11 +49,9 @@
   font-weight: 400;
 
   font-size: 8px;
-  line-height: 1.3;
+  line-height: 1.25;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
 
   padding: 7px 14px;
   border-radius: 20px;
@@ -62,9 +60,9 @@
 
   @media screen and (min-width: $desktop) {
     font-size: 14px;
+    line-height: 1.3;
 
-    padding: 12px 20px;
-    border-radius: 22px;
+    padding: 11px 23px;
   }
 }
 
