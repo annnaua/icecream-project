@@ -16,6 +16,9 @@
   @media screen and (min-width: $tablet) {
     flex-basis: calc(100% / 3 - 32px);
   }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 32px);
+  }
 }
 .advantages-title {
   margin-bottom: 20px;
@@ -32,12 +35,19 @@
     line-height: 1.15;
     margin-bottom: 13px;
   }
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+    line-height: 1.14;
+    margin-bottom: 16px;
+  }
   &::before {
     content: '';
     display: block;
     margin-bottom: 16px;
     background-repeat: no-repeat;
     background-size: contain;
+    animation: bounceInDown 3s 0.5s;
+
     @media screen and (min-width: $tablet) {
       margin-bottom: 36px;
     }
@@ -83,5 +93,9 @@
   @media screen and (min-width: $tablet) {
     font-size: 14px;
     line-height: 1.71;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.75;
   }
 }
