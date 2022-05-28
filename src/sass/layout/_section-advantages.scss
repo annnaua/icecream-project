@@ -16,9 +16,6 @@
   @media screen and (min-width: $tablet) {
     flex-basis: calc(100% / 3 - 32px);
   }
-  @media screen and (min-width: $desktop) {
-    flex-basis: calc(100% / 3 - 32px);
-  }
 }
 .advantages-title {
   margin-bottom: 20px;
@@ -97,5 +94,6 @@
   @media screen and (min-width: $desktop) {
     font-size: 16px;
     line-height: 1.75;
+    width: 85%;
   }
 }
