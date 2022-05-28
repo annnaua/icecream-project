@@ -1,0 +1,138 @@
+<section>
+    <div class="backdrop is-hidden" data-buy>
+        <div class="modal">
+            <button class="btn-mod" data-buy-close>
+                <svg class="btn-icon" width="11px" height="11px">
+                    <use href="./images/icons/icons.svg#icon-modal-cl"></use>
+                </svg>
+            </button>
+        <div>
+            <span class="modal-header">Make your choice</span>
+            <form class="modal-form">
+                <div class="form-radio">
+                    <ul class="radio-list-product">
+                        <li class="radio-item">
+                            <label class="radio-text">
+                                <input type="radio" name="product" value="icecream" class="inp-check" />
+                                <svg class="radio-icon" width="60px" height="60px">
+                                    <use href="./images/icons/icons.svg#icon-ice-cream"></use>
+                                </svg>
+                                <span  class="modal-text">Ice Cream</span>
+                            </label>
+                        </li>
+                            <li class="radio-item">
+                            <label class="radio-text">
+                                <input type="radio" name="product" value="icecoffe" class="inp-check" />
+                                <svg class="radio-icon" width="60px" height="60px">
+                                    <use href="./images/icons/icons.svg#icon-ice-coffee"></use>
+                                </svg>
+                                <span  class="modal-text">Ice Coffe</span>
+                                </label>
+                        </li>
+                        <li class="radio-item">
+                            <label class="radio-text">
+                                <input type="radio" name="product" value="milkshake" class="inp-check" />
+                                <svg class="radio-icon" width="60px" height="60px">
+                                    <use href="./images/icons/icons.svg#icon-milkshake"></use>
+                                </svg>
+                                <span class="modal-text">Milkshake</span>
+                                </label> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-bloc">
+                <label class="input-text" for="name">Name</label>
+                <input type="text" name="name" autofocus class="modal-inp" />
+                </div>
+                <div class="form-bloc">
+                <label class="input-text" for="tel">Telephone</label>
+                <input type="text" name="tel" autofocus class="modal-inp" />
+                </div>
+                <div class="form-radio">
+                    <ul class="radio-list">
+                        <li class="radio-item">
+                            <label class="delivery-label">
+                            <input type="radio" name="delivery" value="delivery" class="inp-check" />
+                            <svg class="delivery-icon">
+                                <use href="./images/icons/icons.svg#icon-delivery"></use>
+                            </svg>
+                            <span class="modal-text text-delivery">Delivery</span>
+                            </label>
+                        </li>
+                            <li class="radio-item">
+                            <label class="delivery-label">
+                            <input type="radio" name="delivery" value="cafe" class="inp-check" />
+                            <svg class="delivery-icon">
+                                <use href="./images/icons/icons.svg#icon-cafe"></use>
+                            </svg>
+                            <span class="modal-text text-delivery">In cafe</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-bloc">
+                    <label class="input-text" for="komment">Comment</label>
+                    <textarea name="komment" class="modal-area" placeholder="enter text"></textarea>
+                </div>
+                <button type="submit" class="button-red button-send" >Send</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div class="backdrop  is-hidden" data-read-open>
+        <div class="modal">
+            <button class="btn-mod" data-read-close>
+                <svg class="btn-icon" width="11px" height="11px">
+                    <use href="./images/icons/icons.svg#icon-modal-cl"></use>
+                </svg>
+            </button>
+            <div>
+                <span class="modal-header">How it’s made?</span>
+            <div class="container-read">
+                <ul class="read-list">
+                    <li class="read-item">
+                    <div class="read-thumb">
+                    <picture>
+                        <source srcset="
+                                ./images/mobile/product1-img-mobile.png    1x,
+                                ./images/mobile/product1-img-mobile@2x.png 2x
+                              " />
+                        <img class="read-image" src="./images/mobile/product1-img-mobile.png" alt="Ice Cream" />
+                    </picture>
+                    <span class="read-text read-text-reght">
+                        Ice cream is a frozen sweet mass of dairy products with various additives. This is a favorite treat for both children and adults. One serving of ice cream is sold every three seconds. Before entering politics, Margaret Thatcher invented soft ice cream.
+                    </span>
+                    </div>
+                    </li>
+                    <li class="read-item">
+                    <div class="read-thumb">
+                    <span class="read-text">
+                        There are several ways to prepare cold coffee. In the first case, the finished hot drink is cooled to the desired
+                        temperature, in the second case, coffee is prepared by keeping ground beans in water, after which it is filtered.
+                    </span>
+                    <picture>
+                        <source srcset="
+                                ./images/mobile/product2-img-mobile.png    1x,
+                                ./images/mobile/product2-img-mobile@2x.png 2x
+                              " />
+                        <img class="read-image" src="./images/mobile/product2-img-mobile.png" alt="Ice Coffe" />
+                    </picture></div>
+                    </li>
+                    <li class="read-item">
+                    <div class="read-thumb">
+                    <picture>
+                        <source srcset="
+                                ./images/mobile/product3-img-mobile.png    1x,
+                                ./images/mobile/product3-img-mobile@2x.png 2x
+                              " />
+                        <img class="read-image" src="./images/mobile/product3-img-mobile.png" alt="Milkshake" />
+                    </picture>
+                    <span class="read-text read-text-reght">
+                        A traditional milkshake consists of 2-3 ingredients. First of all, it is milk and ice cream or sorbet (we will tell you below when you need to use it). And do not forget about the wonderful power of spices and spices. First of all, about
+                        vanilla.
+                    </span></div>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</section>
