@@ -15,9 +15,9 @@
   flex-basis: calc(100% / 1 - 32px);
 }
 .advantages-title {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 
-  font-family: 'Titan One';
+  font-family: $title-font;
   font-weight: 400;
   font-size: 36px;
   line-height: 1.14;
@@ -76,5 +76,5 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 1.67;
-  color: $black;
+  color: $text-black;
 }
