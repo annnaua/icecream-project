@@ -49,13 +49,30 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: $white;
+  padding-top: 70px;
 
   &::after {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%);
+
     content: '';
+    width: 26px;
+    height: 6px;
+    background-image: url('../images/icons/icomoon/SVG/dots-products.svg#dots-products');
   }
 }
 
 .contact-img {
   position: absolute;
   top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.button-circle-large {
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
 }
