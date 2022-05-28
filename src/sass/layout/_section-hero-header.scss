@@ -1,5 +1,7 @@
 .btn-buy {
   z-index: 4;
+  margin-left: 32px;
+  width: 160px;
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -7,6 +9,9 @@
 .btn-buy-menu {
   @media screen and (min-width: 1280px) {
     display: none;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 90%;
   }
   margin-left: 20px;
   margin-bottom: 32px;
@@ -20,8 +25,15 @@
   left: 0;
   top: 0;
   z-index: 99;
+  @media screen and (max-width: 767px) {
+    padding-top: 8px;
+  }
+
   &-logo {
     z-index: 3;
+    @media screen and (max-width: 1279px) {
+      margin-right: auto;
+    }
   }
   &-btn-icon {
     margin-left: 15px;
@@ -39,10 +51,11 @@
   &-body {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 60px;
-
+    @media screen and (min-width: 1280px) {
+      justify-content: space-between;
+    }
     @media screen and (max-width: 767px) {
       height: 50px;
     }
@@ -56,6 +69,7 @@
       width: 20px;
       height: 12px;
       z-index: 6;
+      cursor: pointer;
     }
   }
   &-burger span {
@@ -84,10 +98,12 @@
   &-burger.active::before {
     transform: rotate(45deg);
     top: 5px;
+    background-color: $button-bg-white;
   }
   &-burger.active::after {
     transform: rotate(-45deg);
     bottom: 6px;
+    background-color: $button-bg-white;
   }
   &-burger.active span {
     transform: scale(0);
@@ -117,7 +133,7 @@
   &-menu.active {
     transform: translateX(0);
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-      transform: translateX(48%);
+      transform: translateX(60%);
     }
   }
   &-list {
