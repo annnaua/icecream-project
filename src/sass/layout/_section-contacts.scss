@@ -1,0 +1,138 @@
+.contacts {
+  background-image: linear-gradient(
+    to bottom,
+    $bg-white 25%,
+    $bg-rose-light 25%
+  );
+}
+
+.contacts-list-item {
+  padding: 40px 32px;
+  border-radius: 24px;
+
+  background-color: $bg-white;
+  box-shadow: 0px 8px 30px $bg-shadow;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts-list-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 16px;
+  border-radius: 4px;
+
+  background-color: $accent-yellow;
+  color: $text-white;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  &.accent-green {
+    width: 130px;
+
+    background-color: $accent-green;
+  }
+}
+
+.city-wrap {
+  padding-bottom: 24px;
+  border-bottom: 1px solid $border-gray;
+}
+
+.city-wrap-title {
+  margin-bottom: 8px;
+
+  color: $title-black;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+}
+
+.city-wrap-text {
+  width: 179px;
+
+  color: $text-rose-gray;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.work-wrap {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $border-gray;
+}
+
+.work-title {
+  color: $text-black;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.work-text {
+  color: $text-rose;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+}
+
+.link-wrap {
+  padding-top: 24px;
+}
+
+.contacts-list-link {
+  display: block;
+
+  color: $text-rose-gray;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+
+  &:hover,
+  &:focus {
+    color: $text-red;
+  }
+}
+
+.contacts .button-red {
+  width: 161px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.icon-btn-red {
+  margin-left: 8px;
+}
+
+.contacts .button-white {
+  width: 161px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.icon-btn-white {
+  margin-left: 14px;
+}
