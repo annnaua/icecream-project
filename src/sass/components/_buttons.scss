@@ -47,17 +47,23 @@
 %button-hero {
   font-family: $primary-font;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.3;
+
+  font-size: 8px;
+  line-height: 1.25;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
 
-  padding: 12px 20px;
-  border-radius: 22px;
+  padding: 7px 14px;
+  border-radius: 20px;
 
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.3;
+
+    padding: 11px 23px;
+  }
 }
 
 .button-hero-white {
@@ -82,4 +88,43 @@
   &:focus {
     background-color: $button-bg-red-hover;
   }
+}
+
+// button circle
+
+%button-circle {
+  border-radius: 50%;
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: $text-red;
+  background-color: $button-bg-white;
+
+  &:hover,
+  &:focus {
+    background-color: $button-bg-white-hover;
+  }
+}
+
+.button-circle-small {
+  @extend %button-circle;
+
+  @media screen and (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.button-circle-large {
+  @extend %button-circle;
+
+  width: 40px;
+  height: 40px;
 }
