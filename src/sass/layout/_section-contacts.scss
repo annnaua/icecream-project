@@ -1,5 +1,9 @@
 .contacts {
-  background-color: $accent-green;
+  background-image: linear-gradient(
+    to bottom,
+    $bg-white 25%,
+    $bg-rose-light 25%
+  );
 }
 
 .contacts-list-item {
@@ -109,12 +113,20 @@
 }
 
 .contacts .button-red {
+  width: 161px;
   margin-right: auto;
   margin-bottom: 10px;
   margin-left: auto;
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.icon-btn-red {
+  margin-left: 8px;
 }
 
 .contacts .button-white {
+  width: 161px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 32px;
