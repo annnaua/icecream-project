@@ -13,6 +13,9 @@
   margin-left: 32px;
   margin-top: 32px;
   flex-basis: calc(100% / 1 - 32px);
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - 32px);
+  }
 }
 .advantages-title {
   margin-bottom: 20px;
@@ -24,15 +27,25 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $red;
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 13px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 36px;
+    }
+  }
 }
 .advan1::before {
-  content: '';
-  display: block;
   width: 33px;
   height: 50px;
-  margin-bottom: 16px;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url('../images/icons/icon-advan1.png');
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -41,13 +54,8 @@
   }
 }
 .advan2::before {
-  content: '';
-  display: block;
   width: 50px;
   height: 50px;
-  margin-bottom: 16px;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url('../images/icons/icon-advan2.png');
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -56,13 +64,8 @@
   }
 }
 .advan3::before {
-  content: '';
-  display: block;
   width: 44px;
   height: 50px;
-  margin-bottom: 16px;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url('../images/icons/icon-advan3.png');
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
