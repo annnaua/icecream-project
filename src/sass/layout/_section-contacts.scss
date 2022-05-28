@@ -105,13 +105,11 @@
 }
 
 .work-wrap {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 0;
   border-bottom: 1px solid $border-gray;
 
   @media screen and (min-width: $tablet) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 32px 0;
   }
 }
 
