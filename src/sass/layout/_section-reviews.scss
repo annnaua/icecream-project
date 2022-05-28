@@ -1,0 +1,118 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+
+    /* Center slide text vertically */
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: -webkit-flex;
+    // display: flex;
+    // flex-direction: column;
+    // -webkit-box-pack: center;
+    // -ms-flex-pack: center;
+    // -webkit-justify-content: center;
+    // justify-content: center;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+    // -webkit-align-items: center;
+    // align-items: center;
+}
+
+.swiper-slide img {
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 16px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #D9D9D9;
+    opacity: 1;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
+}
+
+.swiper-pagination-bullet-active {
+    background-image: url("../images/icons/icomoon/SVG/home.svg");
+    background-size: cover;
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+    align-items: center;
+    }
+
+.article-img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.article-text::before {
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: -3px;
+    z-index: -1;
+
+    content: "";
+    width: 54px;
+    height: 40px;
+    background-image: url("../images/icons/quotes.png");
+}
+
+.article-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2.55;
+    text-align: center;
+
+    background-image: repeating-linear-gradient(to bottom,
+                #FAFAFA,
+                #FAFAFA 30px,
+                #E1E1E1 31px,
+                #E1E1E1 31px);
+    padding: 0px 8px 9px 15px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.article-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    position: relative;
+    margin-top: 36px;
+}
+
+.article-name::before {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%);
+    
+    content: "";
+    width: 32px;
+    height: 4px;
+    background-image: url("../images/icons/icomoon/SVG/marker.svg");
+}
+
+.bg-container {
+    width: 100%;
+    padding: 43px 50px 17px 50px;
+    background-color: #FAFAFA;
+    margin-top: 32px;
+}
+
