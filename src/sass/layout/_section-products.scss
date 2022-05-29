@@ -1,19 +1,44 @@
+.product {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin: -8px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: -16px;
+  }
+}
+
 .product-item {
   position: relative;
   padding-top: 140px;
   width: 100%;
   height: 100%;
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 3 * 16px) / 3);
+    margin: 8px;
+    padding-top: 138px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 3 * 32px) / 3);
+    margin: 16px;
+    padding-top: 260px;
+  }
 }
 
 %product-box {
   width: 100%;
   height: 100%;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-top: 160px;
+  padding: 160px 40px 40px 40px;
   border-radius: 24px;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    padding: 118px 32px 40px 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 165px 75px 60px 75px;
+  }
 }
 
 .product-box-first {
@@ -51,8 +76,28 @@
     (min-resolution: 2dppx) {
     background-image: url('../images/mobile/product1-img-mobile@2x.png');
   }
-}
 
+  @media screen and (min-width: $tablet) {
+    width: 224px;
+    height: 224px;
+    background-image: url('../images/tablet/product1-img-tablet.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/product1-img-tablet@2x.png');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 394px;
+    height: 394px;
+    background-image: url('../images/desktop/product1-img-desktop.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/product1-img-desktop@2x.png');
+    }
+  }
+}
 .product-box-second::before {
   position: absolute;
   top: 0;
@@ -69,6 +114,27 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('../images/mobile/product2-img-mobile@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 224px;
+    height: 224px;
+    background-image: url('../images/tablet/product2-img-tablet.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/product2-img-tablet@2x.png');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 394px;
+    height: 394px;
+    background-image: url('../images/desktop/product2-img-desktop.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/product2-img-desktop@2x.png');
+    }
   }
 }
 
@@ -89,6 +155,27 @@
     (min-resolution: 2dppx) {
     background-image: url('../images/mobile/product3-img-mobile@2x.png');
   }
+
+  @media screen and (min-width: $tablet) {
+    width: 224px;
+    height: 224px;
+    background-image: url('../images/tablet/product3-img-tablet.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/product3-img-tablet@2x.png');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 394px;
+    height: 394px;
+    background-image: url('../images/desktop/product3-img-desktop.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/product3-img-desktop@2x.png');
+    }
+  }
 }
 
 .product-title {
@@ -99,6 +186,11 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $text-white;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 
   &::after {
     display: block;
@@ -116,6 +208,14 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: $text-white;
+
+  @media screen and (min-width: $tablet) {
+    line-height: 1.79;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
 }
 
 .button-circle-large {
