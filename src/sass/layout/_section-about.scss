@@ -17,11 +17,18 @@
   }
 }
 .about-content {
-  width: 78%;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
   margin-top: 40px;
+  @media screen and (max-width: 767.9px) {
+    width: 78%;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 45%;
+    font-size: 14px;
+    line-height: 1.76;
+  }
 }
 .about-second-content {
   display: block;
@@ -33,6 +40,21 @@
   width: 100%;
   margin: 0 auto;
 }
-.svg-img {
+.about-svg-img {
   margin-left: 14px;
+}
+.about-flex-box {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+.about-image-box {
+  @media screen and (min-width: $tablet) {
+    margin-right: 32px;
+  }
+}
+.about-button {
+  @media screen and (min-width: $tablet) {
+    margin-top: 40px;
+  }
 }
