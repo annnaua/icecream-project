@@ -922,6 +922,21 @@ address {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .about-container {
+    background-image: url("../images/desktop/about2-img-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 0 78%;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .about-container {
+    background-image: url("../images/desktop/about2-img-desktop@2x.png");
+  }
+}
+
 .about-content {
   font-weight: 500;
   font-size: 12px;
@@ -935,9 +950,19 @@ address {
   }
 }
 
-@media screen and (max-width: 1279.9px) {
+@media screen and (min-width: 768px) {
   .about-content {
-    width: 50%;
+    width: 45%;
+    font-size: 14px;
+    line-height: 1.76;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-content {
+    width: 35%;
+    font-size: 16px;
+    margin-left: 139px;
   }
 }
 
@@ -957,15 +982,31 @@ address {
   margin-left: 14px;
 }
 
-.about-flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .about-flex-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-flex-box {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .about-image-box {
     margin-right: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-button {
+    margin-top: 40px;
   }
 }
 
@@ -1651,6 +1692,19 @@ address {
   }
 }
 
+.footer-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 @media screen and (max-width: 767px) {
   .footer-col {
     padding: 40px 0px;
@@ -1734,11 +1788,13 @@ address {
 }
 
 .footer-slogan {
+  display: block;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.85;
   color: #000000;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -1774,30 +1830,33 @@ address {
 }
 
 .copy {
+  width: 100%;
+  border-top: 1px solid #e1e1e1;
   text-align: center;
-  padding: 8px 0px;
-}
-
-@media screen and (max-width: 767px) {
-  .copy {
-    width: 135px;
-    margin: 0px auto;
-    padding: 16px 0px;
-  }
 }
 
 .footer-copyright {
+  display: block;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
   color: #907e82;
+  padding: 8px 0px;
 }
 
 @media screen and (min-width: 768px) {
   .footer-copyright {
     line-height: 1.86;
     letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-copyright {
+    width: 135px;
+    margin: 0px auto;
+    padding: 16px 0px;
   }
 }
 /*# sourceMappingURL=index.css.map */
