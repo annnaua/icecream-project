@@ -13,24 +13,28 @@
   @media screen and (max-width: 767px) {
     max-width: 90%;
   }
-  margin-left: 20px;
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+  }
   margin-bottom: 32px;
 }
 .container-header {
   position: relative;
 }
 .header {
+  padding-top: 15px;
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 99;
-  @media screen and (max-width: 767px) {
-    padding-top: 8px;
+  @media screen and (min-width: 768px) {
+    padding-top: 35px;
   }
 
   &-logo {
     z-index: 3;
+
     @media screen and (max-width: 1279px) {
       margin-right: auto;
     }
@@ -56,8 +60,12 @@
     @media screen and (min-width: 1280px) {
       justify-content: space-between;
     }
+    @media screen and (min-width: 768px) {
+      padding-bottom: 35px;
+    }
     @media screen and (max-width: 767px) {
       height: 50px;
+      padding-bottom: 18px;
     }
   }
 
