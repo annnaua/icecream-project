@@ -1,3 +1,7 @@
+.section-title-product {
+  margin-top: 15px;
+}
+
 .product-item {
   position: relative;
   padding-top: 140px;
@@ -42,6 +46,15 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $white;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 26px;
+    height: 6px;
+    margin: 32px auto;
+    background-image: url(../images/icons/dots-product.svg);
+  }
 }
 .product-text {
   font-weight: 700;
@@ -57,6 +70,7 @@
   left: 50%;
   transform: translate(-50%);
 }
+
 .button-circle-large {
   margin-top: 32px;
   margin-right: auto;
