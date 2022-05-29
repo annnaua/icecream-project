@@ -1,66 +1,186 @@
-<section class="hero">
-  <header class="header">
-    <div class="container">
-      <nav class="header-body">
-        <a href="./index.html" class="header-logo">
-          <img
-            src="./images/logo.svg"
-            alt="logo site"
-            width="199"
-            height="50"
-          />
-        </a>
+<header class="header">
+  <div class="container">
+    <nav class="header-body">
+      <a href="./index.html" class="header-logo">
+        <img src="./images/logo.svg" alt="logo site" width="199" height="50" />
+      </a>
 
-        <div class="header-burger">
-          <span></span>
-        </div>
+      <div class="header-burger">
+        <span></span>
+      </div>
 
-        <div class="header-menu">
-          <button class="header-btn-buy btn-buy-menu" type="button">
-            Buy now
-            <svg class="header-btn-icon" width="6" height="8">
-              <use href="./images/icons/icons.svg#icon-arrow-button"></use>
-            </svg>
-          </button>
-          <ul class="header-list">
-            <li class="header-item">
-              <a href="" class="header-link">Home</a>
-            </li>
-            <li class="header-item">
-              <a href="" class="header-link">About us</a>
-            </li>
-            <li class="header-item">
-              <a href="" class="header-link">How it’s made?</a>
-            </li>
-            <li class="header-item">
-              <a href="" class="header-link">Our products</a>
-            </li>
-            <li class="header-item">
-              <a href="" class="header-link">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <button class="header-btn-buy btn-buy" type="button">
+      <div class="header-menu">
+        <button class="header-btn-buy btn-buy-menu" type="button">
           Buy now
           <svg class="header-btn-icon" width="6" height="8">
             <use href="./images/icons/icons.svg#icon-arrow-button"></use>
           </svg>
         </button>
-      </nav>
-    </div>
-  </header>
+        <ul class="header-list">
+          <li class="header-item">
+            <a href="" class="header-link">Home</a>
+          </li>
+          <li class="header-item">
+            <a href="" class="header-link">About us</a>
+          </li>
+          <li class="header-item">
+            <a href="" class="header-link">How it’s made?</a>
+          </li>
+          <li class="header-item">
+            <a href="" class="header-link">Our products</a>
+          </li>
+          <li class="header-item">
+            <a href="" class="header-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <button class="header-btn-buy btn-buy" type="button">
+        Buy now
+        <svg class="header-btn-icon" width="6" height="8">
+          <use href="./images/icons/icons.svg#icon-arrow-button"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
 
+<section class="hero">
   <div class="container hero-container">
-    <h1 class="hero-title">
-      ice cream <br />
-      made with <br />
-      <span class="hero-title-other">passion</span>
-    </h1>
-    <div class="header-wrapper">
-      <button type="button" class="button-hero-red">Products</button>
-      <button type="button" class="button-hero-white margin-left">
-        How it’s made?
+    <div class="hero-wrapper">
+      <h1 class="hero-title">
+        ice cream <br />
+        made with <br />
+        <span class="hero-title-other">passion</span>
+      </h1>
+      <div class="hero-wrapper-button">
+        <button type="button" class="button-hero-red">Products</button>
+        <button type="button" class="button-hero-white margin-left">
+          How it’s made?
+        </button>
+      </div>
+    </div>
+    <div class="hero-wrapper-text">
+      <p class="hero-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et
+      </p>
+      <button type="button" class="button-circle-small">
+        <svg class="hero-icon">
+          <use
+            href="./images/icons/icomoon/symbol-defs.svg#icon-arrow-button-circle"
+          ></use>
+        </svg>
       </button>
     </div>
+    <div class="hero-wrapper-number">
+      <p class="hero-numder">
+        16<span class="hero-number-text">cafes lorem</span>
+      </p>
+      <p class="hero-numder">
+        23<span class="hero-number-text">food trucks</span>
+      </p>
+    </div>
+
+    <picture>
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/desktop/hero-cream-img-desktop.png    1x,
+          ./images/desktop/hero-cream-img-desktop@2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/tablet/hero-cream-img-tablet.png    1x,
+          ./images/tablet/hero-cream-img-tablet@2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="
+          ./images/mobile/hero-cream-img-mobile.png    1x,
+          ./images/mobile/hero-cream-img-mobile@2x.png 2x
+        "
+      />
+      <img
+        class="img-cream"
+        src="./images/mobile/hero-cream-img-mobile.png"
+        alt="мороженное"
+      />
+    </picture>
+
+    <picture>
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/desktop/hero-circle-img-desktop.png    1x,
+          ./images/desktop/hero-circle-img-desktop@2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 481px)"
+        srcset="
+          ./images/tablet/hero-circle-img-tablet.png    1x,
+          ./images/tablet/hero-circle-img-tablet@2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="
+          ./images/mobile/hero-circle-img-mobile.png    1x,
+          ./images/mobile/hero-circle-img-mobile@2x.png 2x
+        "
+      />
+      <img
+        class="img-circle"
+        src="./images/mobile/hero-circle-img-mobile.png"
+        alt="круг"
+      />
+    </picture>
+
+    <picture>
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/desktop/hero-milk-img-desktop.png    1x,
+          ./images/desktop/hero-milk-img-desktop@2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/tablet/hero-milk-img-tablet.png    1x,
+          ./images/tablet/hero-milk-img-tablet@2x.png 2x
+        "
+      />
+      <img
+        class="img-milk"
+        src="./images/tablet/hero-milk-img-tablet.png"
+        alt="молоко"
+      />
+    </picture>
+
+    <picture>
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/desktop/hero-girl-img-desktop.png   1x,
+          ./images/desktop/hero-girl-img-desktop2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/tablet/hero-girl-img-tablet.png    1x,
+          ./images/tablet/hero-girl-img-tablet@2x.png 2x
+        "
+      />
+      <img
+        class="img-girl"
+        src="./images/tablet/hero-girl-img-tablet.png"
+        alt="девушка"
+      />
+    </picture>
   </div>
 </section>
