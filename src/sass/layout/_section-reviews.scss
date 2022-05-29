@@ -111,15 +111,15 @@
     z-index: 1;
 
     @media screen and (min-width: $tablet) {
-        font-size: 16px;
-        line-height: 1.86;
+        font-size: 14px;
+        line-height: 2.16;
 
         padding: 0px 49px 8px 45px;
     }
 
     @media screen and (min-width: $desktop) {
-        font-size: 14px;
-        line-height: 2.16;
+        font-size: 16px;
+        line-height: 1.86;
         letter-spacing: 0.04em;
 
         padding: 0px 35px 8px 36px;
