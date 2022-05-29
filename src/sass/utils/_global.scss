@@ -8,6 +8,9 @@ body {
   color: $text-black;
 
   background-color: $bg-white;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 p,
