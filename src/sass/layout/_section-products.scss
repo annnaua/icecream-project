@@ -1,12 +1,8 @@
-.section-title-product {
-  margin-top: 15px;
-}
-
 .product-item {
   position: relative;
   padding-top: 140px;
   width: 100%;
-  height: 629px;
+  height: 100%;
 }
 
 %product-box {
@@ -38,6 +34,63 @@
   background-color: $accent-green;
 }
 
+.product-box-first::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  content: '';
+  display: block;
+  width: 280px;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/mobile/product1-img-mobile.png');
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/mobile/product1-img-mobile@2x.png');
+  }
+}
+
+.product-box-second::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  content: '';
+  display: block;
+  width: 280px;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/mobile/product2-img-mobile.png');
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/mobile/product2-img-mobile@2x.png');
+  }
+}
+
+.product-box-third::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  content: '';
+  display: block;
+  width: 280px;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/mobile/product3-img-mobile.png');
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/mobile/product3-img-mobile@2x.png');
+  }
+}
+
 .product-title {
   font-family: $title-font;
   font-weight: 400;
@@ -45,7 +98,7 @@
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: $white;
+  color: $text-white;
 
   &::after {
     display: block;
@@ -61,14 +114,7 @@
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: $white;
-}
-
-.contact-img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
+  color: $text-white;
 }
 
 .button-circle-large {
