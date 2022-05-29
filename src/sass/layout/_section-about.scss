@@ -15,6 +15,19 @@
       background-image: url('../images/mobile/about2-img-mobile@2x.png');
     }
   }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('../images/desktop/about2-img-desktop.png');
+    background-repeat: no-repeat;
+    background-position: 0 78%;
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/about2-img-desktop@2x.png');
+    }
+  }
 }
 .about-content {
   font-weight: 500;
@@ -28,6 +41,11 @@
     width: 45%;
     font-size: 14px;
     line-height: 1.76;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 35%;
+    font-size: 16px;
+    margin-left: 139px;
   }
 }
 .about-second-content {
@@ -46,6 +64,9 @@
 .about-flex-box {
   @media screen and (min-width: $tablet) {
     display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    justify-content: flex-start;
   }
 }
 .about-image-box {
