@@ -8,6 +8,10 @@ body {
   color: $text-black;
 
   background-color: $bg-white;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 p,
@@ -131,6 +135,8 @@ address {
 
   text-align: center;
   text-transform: uppercase;
+
+  margin-bottom: 15px;
 
   color: $title-rose;
 

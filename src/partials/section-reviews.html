@@ -1,10 +1,34 @@
 <article class="section-container section-article">
-    <div class="container">
+    <div class="container article-container">
         <div class="swiper mySwiper">
             <h2 class="is-hidden">Customer reviews</h2>
             <div class="swiper-wrapper">
-                <div class="swiper-slide customer-item"><img src="./images/mobile/avatar1-img-mobile.png" alt=""
-                        class="article-img">
+                <div class="swiper-slide customer-item">
+                    <picture>
+                        <source
+                            srcset="./images/desktop/avatar1-img-desktop.png 1x, ./images/desktop/avatar1-img-desktop@2x.png 2x"
+                            media="(min-width: 1200px)" />
+                        <source
+                            srcset="./images/tablet/avatar1-img-tablet.png 1x, ./images/tablet/avatar1-img-tablet2x.png 2x"
+                            media="(min-width: 768px)" />
+                        <source
+                            srcset="./images/mobile/avatar1-img-mobile.png 1x, ./images/mobile/avatar1-img-mobile2x.png 2x"
+                            media="(max-width: 767px)" />
+                        <img src="./images/mobile/avatar1-img-mobile.png" alt="Emily" class="article-img">
+                    </picture>
+                    <div class="bg-container">
+                        <p class="article-text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                            Aliquam
+                            sem. In hendrerit nulla
+                            quam
+                            nunc, accumsan
+                            congue. Lorem ipsum primis in nibh vel risus.</p>
+                    </div>
+                    <h3 class="article-name">Emily, Los Angeles</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img srcset="./images/desktop/avatar2-img-desktop.png 1x, ./images/desktop/avatar2-img-desktop@2x.png 2x"
+                        src="./images/desktop/avatar2-img-desktop.png" alt="Name" class="article-img">
                     <div class="bg-container">
 
                         <p class="article-text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
@@ -17,22 +41,9 @@
                     </div>
                     <h3 class="article-name">Emily, Los Angeles</h3>
                 </div>
-                <div class="swiper-slide"><img src="./images/desktop/avatar2-img-desktop.png" alt=""
-                        class="article-img">
-                    <div class="bg-container">
-
-                        <p class="article-text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-                            Aliquam
-                            sem. In hendrerit nulla
-                            quam
-                            nunc, accumsan
-                            congue. Lorem ipsum primis in nibh vel risus.</p>
-
-                    </div>
-                    <h3 class="article-name">Emily, Los Angeles</h3>
-                </div>
-                <div class="swiper-slide"><img src="./images/desktop/avatar3-img-desktop.png" alt=""
-                        class="article-img">
+                <div class="swiper-slide"><img
+                        srcset="./images/desktop/avatar3-img-desktop.png 1x, ./images/desktop/avatar3-img-desktop@2x.png 2x"
+                        src="./images/desktop/avatar3-img-desktop.png" alt="Name" class="article-img">
                     <div class="bg-container">
 
                         <p class="article-text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
