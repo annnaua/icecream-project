@@ -1,3 +1,5 @@
+// HEADER
+
 .btn-buy {
   z-index: 4;
   margin-left: 32px;
@@ -6,6 +8,7 @@
     display: none;
   }
 }
+
 .btn-buy-menu {
   @media screen and (min-width: 1280px) {
     display: none;
@@ -21,6 +24,7 @@
 .container-header {
   position: relative;
 }
+
 .header {
   padding-top: 15px;
   position: fixed;
@@ -129,7 +133,7 @@
       transform: translateX(100%);
       width: 100%;
       height: 100%;
-      background-color: #e17992;
+      background-color: $bg-hero-modal;
       padding: 60px 0;
       transition: 250ms;
       overflow: auto;
@@ -174,36 +178,37 @@
     padding-bottom: 12px;
 
     width: 100%;
-    border-bottom: 1px solid #e18298;
+    border-bottom: 1px solid $border-rose;
     &:first-child {
       padding-top: 12px;
-      border-top: 1px solid #e18298;
+      border-top: 1px solid $border-rose;
     }
   }
 }
 
-// ************hero
+// HERO
 
 .hero {
   background-color: $bg-hero;
-  background-image: url('../images/mobile/hero-cream-img-mobile.png'),
-    url('../images/mobile/hero-circle-img-mobile.png');
-  background-repeat: no-repeat;
-  background-position: right 32px bottom 0, right 0 bottom 75px;
-  background-size: 171px 410px, 284px 344px;
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/mobile/hero-cream-img-mobile@2x.png'),
-      url('../images/mobile/hero-circle-img-mobile@2x.png');
-  }
 }
 
 .hero-container {
-  padding-top: 83px;
+  padding-top: 194px;
   padding-bottom: 158px;
+  position: relative;
+  background-color: $bg-hero;
+  @media screen and (min-width: $tablet) {
+    padding-top: 102px;
+    padding-bottom: 56px;
+  }
+}
+
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 61px;
+  }
 }
 
 .hero-title {
@@ -214,7 +219,10 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $white;
-  margin-top: 111px;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 1.14;
+  }
 }
 
 .hero-title-other {
@@ -222,13 +230,146 @@
   line-height: 0.965;
   color: $title-red;
   max-width: 218px;
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+    line-height: 0.905;
+  }
 }
 
-.header-wrapper {
+.hero-wrapper-button {
   display: flex;
   margin-top: 20px;
 }
 
 .margin-left {
   margin-left: 8px;
+}
+
+.hero-wrapper-text {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    z-index: 1;
+    position: relative;
+    margin-left: 152px;
+  }
+}
+
+.hero-text {
+  font-family: $primary-font;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $text-white;
+  width: 114px;
+  margin-bottom: 7px;
+}
+
+.hero-wrapper-number {
+  display: none;
+  position: relative;
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 92px;
+    right: 32px;
+    display: block;
+    z-index: 1;
+  }
+}
+
+.hero-numder {
+  position: relative;
+  font-family: $title-font;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: $text-red;
+  width: 60px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &::before {
+    display: inline-block;
+    position: relative;
+    content: ' ';
+    background-color: $bg-white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translate(260%, -80%);
+    z-index: -1;
+  }
+}
+
+.hero-number-text {
+  display: block;
+  font-family: $primary-font;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $text-white;
+}
+
+.img-cream {
+  position: absolute;
+  width: 171px;
+  height: 410px;
+  bottom: 0;
+  right: 32px;
+  z-index: 1;
+  @media screen and (min-width: 481px) {
+    right: 94px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    right: 303px;
+    width: 143px;
+    height: 336px;
+  }
+}
+
+.img-circle {
+  position: absolute;
+  width: 284px;
+  height: 344px;
+  bottom: 75px;
+  right: 0;
+  @media screen and (min-width: 481px) {
+    width: 346px;
+  }
+  @media screen and (min-width: $tablet) {
+    bottom: 40px;
+    right: 185px;
+    width: 335px;
+    height: 333px;
+  }
+}
+
+.img-girl {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 32px;
+    width: 190px;
+    height: 150px;
+  }
+}
+
+.img-milk {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    display: block;
+    bottom: 16px;
+    right: 584px;
+    width: 152px;
+    height: 154px;
+  }
+}
+
+.hero-icon {
+  width: 5px;
+  height: 5px;
 }
