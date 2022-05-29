@@ -73,7 +73,8 @@
 
 
 .modal-form,
-.container-read {
+.container-read,
+.container-map {
     padding: 0 15px;
 }
 
@@ -138,8 +139,6 @@
     
     color: $text-rose-gray;
 }
-
-
 
 .radio-list-product {
     display: flex;
@@ -295,4 +294,87 @@
 
 .read-text-reght {
     text-align: right;
+}
+
+.modal-map {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    height: 580px;
+    @media screen and (min-width: $mobile) { 
+        width: 450px;
+        height: 540px;
+    }
+    @media screen and (min-width: $tablet) {
+        height: 540px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 530px;
+        height: 580px;
+    }
+
+    background-color: $bg-rose-light;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.map-header {
+    margin: 15px auto;
+}
+
+.map {
+    min-width: 100px;
+    height: 150px;
+    margin-left: 5px;
+    @media screen and (min-width: $mobile) { 
+        width: 300px;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 280px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 350px;
+    }
+}
+
+.map:nth-child(2n + 1) {
+    margin-right: 5px;
+    margin-left: 0px;
+}
+
+.adress-office {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adress-list:not(:first-child) {
+    margin-top: 15px;
+}
+.adress-title{
+font-size: 10px;    
+}
+
+.adress-title:not(:first-child){
+    margin-top: 0px;
+}
+
+.adress-work {
+    padding-top: 0;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.adress-link {
+    padding-top: 0;
+    text-align: center;
+}
+
+.map-adress {
+    font-size: 16px;
+    color: $text-red;
 }
