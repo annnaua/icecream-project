@@ -5,21 +5,6 @@
 
 .swiper-slide {
     text-align: center;
-
-    /* Center slide text vertically */
-    // display: -webkit-box;
-    // display: -ms-flexbox;
-    // display: -webkit-flex;
-    // display: flex;
-    // flex-direction: column;
-    // -webkit-box-pack: center;
-    // -ms-flex-pack: center;
-    // -webkit-justify-content: center;
-    // justify-content: center;
-    // -webkit-box-align: center;
-    // -ms-flex-align: center;
-    // -webkit-align-items: center;
-    // align-items: center;
 }
 
 .swiper-slide img {
@@ -29,6 +14,10 @@
 .swiper-pagination {
     position: relative;
     margin-top: 16px;
+
+    @media screen and (min-width: $tablet) {
+        margin-top: 32px;
+    }
 }
 
 .swiper-pagination-bullet {
@@ -42,16 +31,34 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
 }
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+}
 
 .swiper-pagination-bullet-active {
-    background-image: url("../images/icons/icomoon/SVG/home.svg");
+    background-image: url("../images/icons/home.svg");
     background-size: cover;
     background-color: transparent;
     width: 12px;
     height: 12px;
     border-radius: 0;
     align-items: center;
+}
+
+.article-container {
+    @media screen and (min-width: $tablet) {
+        padding-left: 74px;
+        padding-right: 74px;
     }
+
+    @media screen and (min-width: $desktop) {
+        padding-left: 123px;
+        padding-right: 123px;
+    }
+}
 
 .article-img {
     margin-right: auto;
@@ -69,6 +76,22 @@
     width: 54px;
     height: 40px;
     background-image: url("../images/icons/quotes.png");
+
+    // @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //     background-image: url("../images/icons/quotes@2x.png");;
+    // }
+
+    @media screen and (min-width: $tablet) {
+        top: -17px;
+        left: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        top: -15px;
+    }
 }
 
 .article-text {
@@ -78,22 +101,48 @@
     text-align: center;
 
     background-image: repeating-linear-gradient(to bottom,
-                #FAFAFA,
-                #FAFAFA 30px,
-                #E1E1E1 31px,
-                #E1E1E1 31px);
+            #FAFAFA,
+            #FAFAFA 30px,
+            #E1E1E1 31px,
+            #E1E1E1 31px);
     padding: 0px 8px 9px 15px;
     width: 100%;
     position: relative;
     z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 14px;
+        line-height: 2.16;
+
+        padding: 0px 49px 8px 45px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.86;
+        letter-spacing: 0.04em;
+
+        padding: 0px 35px 8px 36px;
+    }
 }
 
 .article-name {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.86;
+
     position: relative;
     margin-top: 36px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1279px) {
+        font-size: 16px;
+
+        margin-top: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 20px;
+    }
 }
 
 .article-name::before {
@@ -102,11 +151,11 @@
     top: -16px;
     left: 50%;
     transform: translate(-50%);
-    
+
     content: "";
     width: 32px;
     height: 4px;
-    background-image: url("../images/icons/icomoon/SVG/marker.svg");
+    background-image: url("../images/icons/marker.svg");
 }
 
 .bg-container {
@@ -114,5 +163,15 @@
     padding: 43px 50px 17px 50px;
     background-color: #FAFAFA;
     margin-top: 32px;
+
+    @media screen and (min-width: $tablet) {
+        padding: 47px 6px;
+        margin-top: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 47px 107px 31px 106px;
+        margin-top: 16px;
+    }
 }
 
