@@ -1,7 +1,6 @@
 .backdrop {
   position: fixed;
   width: 100%;
-  z-index: 9999999;
   height: 100%;
   left: 0px;
   top: 0px;
@@ -9,100 +8,143 @@
   background-color: rgba(47, 47, 47, 0.8);
   transition-property: opacity;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: ease;
+
+  z-index: 200;
 }
 
-.modal {
+.modal,
+.modal-franchise {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   width: 90%;
-  height: 540px;
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-    height: 500px;
-  }
-  @media screen and (min-width: $tablet) {
-    height: 540px;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 530px;
-    height: 580px;
-  }
+  padding: 20px;
+  border-radius: 20px;
 
   background-color: $bg-rose-light;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 30px;
+    max-width: 540px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 40px;
+    max-width: 570px;
+  }
 }
 
 .btn-mod {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
+  top: 15px;
+  right: 15px;
 
-  background-color: transparent;
-  border: 1px solid $rose;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   box-sizing: border-box;
-  cursor: pointer;
-  border-radius: 50%;
-}
 
-.btn-mod:hover,
-.btn-mod:focus {
-  background-color: $red;
+  width: 25px;
+  height: 25px;
+
+  border: 2px solid $border-rose-light;
+  border-radius: 50%;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  @media screen and (min-width: $desktop) {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $button-bg-red;
+    border-color: $button-bg-red;
+  }
+
+  transition-duration: 250ms;
+  transition-timing-function: ease;
 }
 
 .btn-icon {
   display: inline-block;
-  fill: $rose;
+  fill: $border-rose-light;
+
+  &:hover,
+  &:focus {
+    fill: $bg-white;
+  }
+
+  .btn-mod:focus + .btn-icon {
+    fill: $bg-white;
+  }
 }
 
-.btn-icon:hover,
-.btn-icon:focus {
-  fill: $white;
-}
-
-.btn-mod:focus + .btn-icon {
-  fill: $white;
-}
-
-.modal-form,
-.container-read,
-.container-map {
-  padding: 0 15px;
-}
-
-.modal-header {
+.modal-header,
+.map-header {
   display: block;
+
   font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+
+  color: $text-red;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 30px 0px;
+
   @media screen and (min-width: $tablet) {
     font-size: 20px;
   }
-
   @media screen and (min-width: $desktop) {
     font-size: 24px;
   }
-
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  font-weight: 700;
-
-  color: $text-red;
-  margin-top: 40px;
-  margin-bottom: 12px;
 }
 
-.modal-text,
-.input-text {
+.modal-text {
   display: flex;
 
-  font-size: 15px;
+  font-size: 10px;
+  line-height: 1.67;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $text-rose-gray;
+  margin-top: 8px;
+
+  transition: 250ms ease color;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.input-text {
+  display: block;
+
+  font-size: 12px;
+  line-height: 1.67;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  color: $text-rose-gray;
+
+  margin-right: 20px;
+
+  text-transform: uppercase;
+
   @media screen and (min-width: $tablet) {
     font-size: 18px;
   }
@@ -110,15 +152,6 @@
   @media screen and (min-width: $desktop) {
     font-size: 20px;
   }
-
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-
-  color: $text-rose-gray;
-}
-
-.input-text {
-  width: 30%;
 }
 
 .text-delivery,
@@ -164,44 +197,34 @@
 
 .modal-inp,
 .modal-area {
-  width: 65%;
-  height: 40px;
-  @media screen and (min-width: $tablet) {
-    width: 270px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 370px;
-  }
-
-  padding-left: 10px;
-
-  background-color: $bg-rose-light;
-  border: 1px solid $border-rose;
   box-sizing: border-box;
-  border-radius: 4px;
   outline: none;
 
-  resize: none;
+  width: 100%;
+
+  height: 40px;
+  padding: 10px;
+
+  background-color: $bg-rose-light;
+  border: 2px solid $border-rose-light;
+  border-radius: 4px;
 }
 
 .modal-area {
-  @media screen and (min-width: $tablet) {
-    height: 60px;
-    padding-top: 5px;
-  }
-
+  height: 60px;
   @media screen and (min-width: $desktop) {
     height: 80px;
-    padding-top: 10px;
   }
+  resize: none;
 }
 
 .form-bloc {
   position: relative;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
   margin-bottom: 12px;
 }
 
@@ -227,6 +250,8 @@
 .radio-icon {
   margin: 0 auto;
   fill: $rose-gray;
+
+  transition: 250ms ease fill;
 }
 
 .delivery-icon {
@@ -256,30 +281,24 @@
 }
 .read-item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
 }
 
 .read-image {
-  width: 120px;
-  height: 120px;
-  @media screen and (min-width: $tablet) {
-    width: 135px;
-    height: 135px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 150px;
-    height: 150px;
-  }
+  width: 100%;
 }
 
 .read-thumb {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .read-text {
-  width: 75%;
   font-size: 10px;
+
   @media screen and (min-width: $mobile) {
     font-size: 14px;
   }
@@ -304,27 +323,21 @@
   transform: translate(-50%, -50%);
 
   width: 90%;
-  height: 580px;
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-    height: 540px;
-  }
-  @media screen and (min-width: $tablet) {
-    height: 540px;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 530px;
-    height: 580px;
-  }
+  padding: 20px;
+  border-radius: 20px;
 
   background-color: $bg-rose-light;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
 
-.map-header {
-  margin: 15px auto;
+  @media screen and (min-width: $tablet) {
+    padding: 30px;
+    max-width: 540px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 40px;
+    max-width: 570px;
+  }
 }
 
 .map {
@@ -381,28 +394,4 @@
 
 .franchise-label {
   border: 1px solid $rose;
-}
-
-.modal-franchise {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 90%;
-  height: 320px;
-
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 500px;
-    height: 360px;
-  }
-
-  background-color: $bg-rose-light;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
 }
