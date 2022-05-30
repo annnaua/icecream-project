@@ -24,23 +24,28 @@
     margin: 16px;
     padding-top: 260px;
     border-radius: 24px;
-
     transition: transform 250ms ease, box-shadow 250ms ease;
 
     &:hover.shadow-rose {
-      transform: translateY(5px);
-      box-shadow: 0px 5px 5px 0px $product-shadow-rose;
-      cursor: pointer;
+      @media screen and (min-width: $desktop) {
+        transform: translateY(7px);
+        box-shadow: 0px 10px 5px -5px $product-shadow-rose;
+        cursor: pointer;
+      }
     }
     &:hover.shadow-yellow {
-      transform: translateY(5px);
-      box-shadow: 0px 5px 5px 0px $product-shadow-yellow;
-      cursor: pointer;
+      @media screen and (min-width: $desktop) {
+        transform: translateY(7px);
+        box-shadow: 0px 10px 5px -5px $product-shadow-yellow;
+        cursor: pointer;
+      }
     }
     &:hover.shadow-green {
-      transform: translateY(5px);
-      box-shadow: 0px 5px 5px 0px $product-shadow-green;
-      cursor: pointer;
+      @media screen and (min-width: $desktop) {
+        transform: translateY(7px);
+        box-shadow: 0px 10px 5px -5px $product-shadow-green;
+        cursor: pointer;
+      }
     }
   }
 }
