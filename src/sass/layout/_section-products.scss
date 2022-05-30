@@ -27,20 +27,20 @@
 
     transition: transform 250ms ease, box-shadow 250ms ease;
 
-    &:hover.shadow-rose,
-    &:focus.shadow-rose {
+    &:hover.shadow-rose {
       transform: translateY(5px);
       box-shadow: 0px 5px 5px 0px $product-shadow-rose;
+      cursor: pointer;
     }
-    &:hover.shadow-yellow,
-    &:focus.shadow-yellow {
+    &:hover.shadow-yellow {
       transform: translateY(5px);
       box-shadow: 0px 5px 5px 0px $product-shadow-yellow;
+      cursor: pointer;
     }
-    &:hover.shadow-green,
-    &:focus.shadow-green {
+    &:hover.shadow-green {
       transform: translateY(5px);
       box-shadow: 0px 5px 5px 0px $product-shadow-green;
+      cursor: pointer;
     }
   }
 }
