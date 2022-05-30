@@ -23,11 +23,13 @@
     keyboard: {
       enable: true,
       onlyInViewport: true,
-    }, 
+    },
 
     effect: 'fade',
     grabCursor: true,
   });
+
+  console.log(swiper.bulletClass);
 
   // ЗАКРЫВАЕТ СЛАЙДЕР
 

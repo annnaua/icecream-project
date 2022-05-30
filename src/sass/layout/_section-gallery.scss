@@ -215,9 +215,10 @@
 
   // ПАГИНАЦИЯ-----------------------------------------
 
-  &-pagination {
+  &-pagination.swiper-pagination {
     position: static;
     margin-top: 10px;
+    text-align: center;
     @media screen and (min-width: $tablet) {
       position: absolute;
     }
@@ -226,7 +227,6 @@
   & .swiper-pagination-bullet {
     width: 7px;
     height: 7px;
-    background-color: $gray;
     opacity: 1;
     transition: background-color 250ms ease-in-out;
 
@@ -238,7 +238,10 @@
 
     &:hover,
     &:focus {
-      background-color: $slider-btn-hover-color;
+      background-color: $button-bg-red;
+      @media screen and (min-width: $tablet) {
+        background-color: $slider-btn-hover-color;
+      }
     }
   }
 
