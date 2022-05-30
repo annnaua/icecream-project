@@ -25,6 +25,11 @@
       onlyInViewport: true,
     },
 
+    mousewheel: {
+      sensitivity: 2,
+      invert: true,
+    },
+
     effect: 'fade',
     grabCursor: true,
   });
