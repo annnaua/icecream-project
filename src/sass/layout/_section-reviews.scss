@@ -23,7 +23,7 @@
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: #d9d9d9;
+  background: $bg-paginator-bullet;
   opacity: 1;
 }
 
@@ -77,13 +77,15 @@
   width: 54px;
   height: 40px;
   background-image: url('../images/icons/quotes.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-  // @media (min-device-pixel-ratio: 2),
-  //     (-webkit-min-device-pixel-ratio: 2),
-  //     (min-resolution: 192dpi),
-  //     (min-resolution: 2dppx) {
-  //     background-image: url("../images/icons/quotes@2x.png");;
-  // }
+  @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/icons/quotes@2x.png");;
+  }
 
   @media screen and (min-width: $tablet) {
     top: -17px;
@@ -103,10 +105,10 @@
 
   background-image: repeating-linear-gradient(
     to bottom,
-    #fafafa,
-    #fafafa 30px,
-    #e1e1e1 31px,
-    #e1e1e1 31px
+    $paginator-gr-white,
+    $paginator-gr-white 30px,
+    $paginator-gr-gray 31px,
+    $paginator-gr-gray 31px
   );
   padding: 0px 8px 9px 15px;
   width: 100%;
@@ -164,7 +166,7 @@
 .bg-container {
   width: 100%;
   padding: 43px 50px 17px 50px;
-  background-color: #fafafa;
+  background-color: $paginator-gr-white;
   margin-top: 32px;
 
   @media screen and (min-width: $tablet) {
