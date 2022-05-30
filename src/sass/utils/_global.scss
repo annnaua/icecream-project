@@ -158,3 +158,9 @@ address {
 
   pointer-events: none;
 }
+
+// no-scroll
+
+.no-scroll {
+  overflow: hidden;
+}

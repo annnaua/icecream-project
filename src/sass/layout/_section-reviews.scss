@@ -1,9 +1,9 @@
-.swiper {
+.mySwiper.swiper {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
   text-align: center;
 }
 
@@ -11,7 +11,7 @@
   object-fit: cover;
 }
 
-.swiper-pagination {
+.mySwiper .swiper-pagination {
   position: relative;
   margin-top: 16px;
 
@@ -25,21 +25,26 @@
   height: 12px;
   background: $bg-paginator-bullet;
   opacity: 1;
+  margin-left: 50px;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+// .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+// .swiper-pagination-horizontal.swiper-pagination-bullets
+//   .swiper-pagination-bullet {
+//   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
+// }
+// .swiper-horizontal > .swiper-pagination-bullets,
+// .swiper-pagination-bullets.swiper-pagination-horizontal,
+// .swiper-pagination-custom,
+// .swiper-pagination-fraction {
+//   bottom: 10px;
+// }
+
+.mySwiper .mySwiper-pagination-bullet.swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
 }
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: 0;
-}
 
-.swiper-pagination-bullet-active {
+.mySwiper .swiper-pagination-bullet-active {
   background-image: url('./../images/icons/home.svg');
   background-size: cover;
   background-color: transparent;

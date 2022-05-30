@@ -1,0 +1,266 @@
+// ГАЛЕРЕЯ ПЛИТКА
+
+.gallery {
+  background-image: linear-gradient(to top, $bg-white 58%, $bg-rose-light 42%);
+
+  &-grid {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(7, minmax(50px, 1fr));
+      grid-auto-rows: 100px;
+      gap: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: repeat(7, minmax(100px, 1fr));
+      grid-auto-rows: 160px;
+      gap: 20px;
+    }
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &-item:nth-child(2n + 1) {
+    grid-row-start: span 2;
+  }
+  &-item:nth-child(3n + 1) {
+    grid-column-start: span 2;
+  }
+  &-item:nth-last-child(-n + 4) {
+    grid-row-start: span 1;
+    grid-column-start: span 1;
+  }
+
+  // ТУМБА КАРТИНКИ----------------------
+
+  &-thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 250ms ease-in-out;
+  }
+
+  &-thumb:hover {
+    position: absolute;
+    z-index: 10;
+    transform: scale(105%, 105%);
+  }
+
+  // КАРТИНКА--------------------------------
+
+  &-img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    filter: brightness(0.8);
+    filter: grayscale(0.3);
+
+    transition: filter 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  }
+
+  &-thumb:hover &-img {
+    cursor: pointer;
+    filter: brightness(1);
+    filter: grayscale(0);
+
+    box-shadow: 4px 4px 7px 0px rgba(212, 20, 67, 0.3);
+
+    @media screen and (min-width: $desktop) {
+      box-shadow: 3px 3px 7px 0px rgba(212, 20, 67, 0.3);
+    }
+  }
+}
+
+// СЛАЙДЕР КАРТИНОК----------------------------------
+
+.img-slider {
+  display: block;
+  width: 100%;
+
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(47, 47, 47, 0.9);
+  }
+
+  // КНОПКА ЗАКРЫТИЯ СЛАЙДЕРА------------------------------
+
+  &-close-btn {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+      z-index: 1000;
+      position: fixed;
+      right: 15px;
+      top: 15px;
+
+      width: 30px;
+      height: 30px;
+
+      background-color: transparent;
+    }
+
+    @media screen and (min-width: $desktop) {
+      right: 20px;
+      top: 20px;
+
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &-close-btn:hover &-icon,
+  &-close-btn:focus &-icon {
+    fill: $slider-btn-hover-color;
+  }
+
+  // ИКОНКА КНОПКИ ЗАКРЫТИЯ СЛАЙДЕРА------------------
+
+  &-icon {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    fill: $accent-green;
+
+    transition: fill 250ms ease-in-out;
+  }
+
+  &-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // ТУМБА КАРТИНКИ---------------------------------------
+
+  &-thumb {
+    position: relative;
+    width: 100%;
+    height: 280px;
+
+    @media screen and (min-width: $mobile) {
+      height: 450px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 80vmin;
+      height: 80%;
+    }
+  }
+
+  // КАРТИНКА----------------------------------------
+
+  &-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 2%;
+  }
+
+  // КНОПКИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ-------------------------------
+
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &-btn-next::after,
+  &-btn-prev::after {
+    color: $accent-green;
+    font-size: 30px;
+    font-weight: bold;
+
+    transition: color 250ms ease-in-out;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 50px;
+    }
+  }
+
+  &-btn-next:hover:after,
+  &-btn-next:focus:after,
+  &-btn-prev:hover:after,
+  &-btn-prev:focus:after {
+    color: $slider-btn-hover-color;
+  }
+
+  // ПАГИНАЦИЯ-----------------------------------------
+
+  &-pagination.swiper-pagination {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+    }
+  }
+
+  & .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    opacity: 1;
+    transition: background-color 250ms ease-in-out;
+
+    @media screen and (min-width: $tablet) {
+      background-color: $accent-green;
+      width: 10px;
+      height: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $button-bg-red;
+      @media screen and (min-width: $tablet) {
+        background-color: $slider-btn-hover-color;
+      }
+    }
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-color: $button-bg-red;
+    width: 8px;
+    height: 8px;
+
+    @media screen and (min-width: $tablet) {
+      width: 12px;
+      height: 12px;
+
+      background-color: $slider-btn-hover-color;
+    }
+  }
+
+  // ОТКЫТИЕ СЛАЙДЕРА----------------------------------
+
+  &.is-open {
+    display: block;
+  }
+}
