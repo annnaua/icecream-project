@@ -8,6 +8,10 @@ body {
   color: $text-black;
 
   background-color: $bg-white;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 p,
@@ -22,6 +26,7 @@ h6 {
 }
 
 a {
+  outline: none;
   display: inline-block;
 
   color: inherit;
@@ -84,11 +89,10 @@ address {
   }
   @media screen and (min-width: $tablet) {
     width: 768px;
-    padding: 0px 32px;
+    padding: 0px 16px;
   }
   @media screen and (min-width: $desktop) {
     width: 1280px;
-    padding: 0px 16px;
   }
 }
 
@@ -133,6 +137,8 @@ address {
   text-align: center;
   text-transform: uppercase;
 
+  margin-bottom: 15px;
+
   color: $title-rose;
 
   @media screen and (min-width: $tablet) {
@@ -151,4 +157,10 @@ address {
   top: -100%;
 
   pointer-events: none;
+}
+
+// no-scroll
+
+.no-scroll {
+  overflow: hidden;
 }

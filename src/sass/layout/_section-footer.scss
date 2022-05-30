@@ -1,0 +1,161 @@
+.footer {
+  background-color: $bg-rose-light;
+}
+
+.footer.section-container {
+  padding-bottom: 0px;
+}
+
+.footer-wrap {
+  // border-bottom: 1px solid $border-gray;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $desktop) {
+    align-items: flex-end;
+    margin-bottom: 60px;
+  }
+}
+
+.section-label.footer-label,
+.section-title.footer-title {
+  text-align: left;
+}
+
+.footer-text {
+  @media screen and (max-width: 767px) {
+    width: 225px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    max-width: 340px;
+  }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 767px) {
+    padding: 40px 0px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer-soc-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-bottom: 40px;
+}
+
+.footer-soc-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.footer-soc-item:not(:last-child) {
+  margin-right: 28px;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 24px;
+  }
+}
+
+.footer-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $rose;
+  fill: currentColor;
+
+  @media screen and (min-width: $tablet) {
+    width: 34px;
+    height: 34px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+}
+
+.footer-slogan {
+  display: block;
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.85;
+  color: $text-black;
+
+  margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.footer-tel {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.85;
+  color: $text-red;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $text-rose;
+  }
+}
+
+.copy {
+  width: 100%;
+  border-top: 1px solid $border-gray;
+  text-align: center;
+}
+
+.footer-copyright {
+  display: block;
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $text-rose-gray;
+
+  @media screen and (min-width: $tablet) {
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
+
+  padding: 8px 0px;
+
+  @media screen and (max-width: 767px) {
+    width: 135px;
+    margin: 0px auto;
+
+    padding: 16px 0px;
+  }
+}
