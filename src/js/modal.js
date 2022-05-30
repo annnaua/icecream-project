@@ -1,59 +1,120 @@
 (() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-buy-open]"),
-    closeModalBtn: document.querySelector("[data-buy-close]"),
-    modal: document.querySelector("[data-buy]"),
+  // КОЛЛЕКЦИЯ КНОПОК ОТКРЫТИЯ МОДАЛЬНЫХ ОКОН--------------------------------------
+
+  const openBtns = {
+    buy: document.querySelector('[data-buy-open]'),
+    map: document.querySelector('[data-map-open]'),
+    franchise: document.querySelector('[data-franchise-open]'),
+    read: document.querySelector('[data-read-open]'),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  // КОЛЛЕКЦИЯ КНОПОК ЗАКРЫТИЯ МОДАЛЬНЫХ ОКОН--------------------------------------
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+  const closeBtns = {
+    buy: document.querySelector('[data-buy-close]'),
+    map: document.querySelector('[data-map-close]'),
+    franchise: document.querySelector('[data-franchise-close]'),
+    read: document.querySelector('[data-read-close]'),
+  };
+
+  // КОЛЛЕКЦИЯ МОДАЛЬНЫХ ОКОН--------------------------------------
+
+  const modals = {
+    buy: document.querySelector('[data-buy]'),
+    map: document.querySelector('[data-map]'),
+    franchise: document.querySelector('[data-franchise]'),
+    read: document.querySelector('[data-read]'),
+  };
+
+  // ФУНКЦИИ ОТКРЫТИЯ И ЗАКРЫТИЯ МОДАЛЬНОГО ОКНА----------------
+
+  function openModal(modal) {
+    modal.classList.remove('is-hidden');
+    pageBody.classList.add('no-scroll');
+  }
+  function closeModal(modal) {
+    modal.classList.add('is-hidden');
+    pageBody.classList.remove('no-scroll');
+  }
+
+  // ДОБАВЛЕНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ КНОПКАМ---------------------
+
+  for (let key in modals) {
+    openBtns[key].addEventListener('click', () => {
+      openModal(modals[key]);
+    });
+    closeBtns[key].addEventListener('click', () => {
+      closeModal(modals[key]);
+    });
   }
 })();
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-map-open]"),
-    closeModalBtn: document.querySelector("[data-map-close]"),
-    modal: document.querySelector("[data-map]"),
-  };
+// function openModal() {
+//   modalWindow.classList.remove('is-hidden');
+//   console.log('open modal');
+// }
+// function closeModal() {
+//   // modalWindow.classList.add('is-hidden');
+// }
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+// buyModalCloseBtn.addEventListener('click', closeModal);
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-buy-open]'),
+//     closeModalBtn: document.querySelector('[data-buy-close]'),
+//     modal: document.querySelector('[data-buy]'),
+//   };
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-franchise-open]"),
-    closeModalBtn: document.querySelector("[data-franchise-close]"),
-    modal: document.querySelector("[data-franchise]"),
-  };
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-map-open]'),
+//     closeModalBtn: document.querySelector('[data-map-close]'),
+//     modal: document.querySelector('[data-map]'),
+//   };
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-read-open]"),
-    closeModalBtn: document.querySelector("[data-read-close]"),
-    modal: document.querySelector("[data-read]"),
-  };
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-franchise-open]'),
+//     closeModalBtn: document.querySelector('[data-franchise-close]'),
+//     modal: document.querySelector('[data-franchise]'),
+//   };
+
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();
+
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-read-open]'),
+//     closeModalBtn: document.querySelector('[data-read-close]'),
+//     modal: document.querySelector('[data-read]'),
+//   };
+
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();
