@@ -1,4 +1,6 @@
 (() => {
+  const pageBody = document.querySelector('body');
+
   // КОЛЛЕКЦИЯ КНОПОК ОТКРЫТИЯ МОДАЛЬНЫХ ОКОН--------------------------------------
 
   const openBtns = {
