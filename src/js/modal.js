@@ -1,5 +1,6 @@
 (() => {
   const pageBody = document.querySelector('body');
+  const menuBuyOpenBtn = document.querySelector('.btn-buy-menu');
 
   // КОЛЛЕКЦИЯ КНОПОК ОТКРЫТИЯ МОДАЛЬНЫХ ОКОН--------------------------------------
 
@@ -49,4 +50,9 @@
       closeModal(modals[key]);
     });
   }
+
+  menuBuyOpenBtn.addEventListener('click', () => {
+    modals.buy.classList.remove('is-hidden');
+    pageBody.classList.add('.no-scroll');
+  });
 })();
