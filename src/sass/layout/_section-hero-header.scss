@@ -22,6 +22,12 @@
   margin-bottom: 18px;
 }
 
+.header-btn-buy {
+  @media screen and (max-width: 769px) {
+    display: none;
+  }
+}
+
 .container-header {
   position: relative;
 }
@@ -227,17 +233,19 @@
 }
 
 .hero-container {
-  padding-top: 194px;
-  padding-bottom: 158px;
   position: relative;
+
+  padding-top: 200px;
+  padding-bottom: 150px;
   background-color: $bg-hero;
+
   @media screen and (min-width: $tablet) {
-    padding-top: 102px;
-    padding-bottom: 56px;
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
   @media screen and (min-width: $desktop) {
-    padding-top: 147px;
-    padding-bottom: 84px;
+    padding-top: 140px;
+    padding-bottom: 80px;
   }
 }
 
