@@ -30,6 +30,10 @@
     flex-basis: calc(100% / 3 - 30px);
     margin-left: 32px;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding: 40px;
+  }
 }
 
 .contacts-list-category {
@@ -53,6 +57,11 @@
     width: 73px;
     height: 28px;
     margin-bottom: 32px;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 75px;
     font-size: 16px;
   }
 
@@ -88,6 +97,10 @@
   @media screen and (min-width: $tablet) {
     font-size: 14px;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
 }
 
 .city-wrap-text {
@@ -99,8 +112,15 @@
   line-height: 1.5;
 
   @media screen and (min-width: $tablet) {
-    width: 100%;
+    max-width: 100%;
     font-size: 14px;
+    line-height: 1.66;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 250px;
+    font-size: 16px;
+    line-height: 1.83;
   }
 }
 
@@ -130,6 +150,10 @@
   @media screen and (min-width: $tablet) {
     font-size: 14px;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
 }
 
 .work-text {
@@ -140,6 +164,10 @@
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
   }
 }
 
@@ -168,6 +196,10 @@
     font-size: 14px;
     line-height: 1.83;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
 }
 
 .button-wrap {
@@ -183,6 +215,10 @@
     justify-content: center;
     padding-top: 40px;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 60px;
+  }
 }
 
 .contacts .button-red {
@@ -196,6 +232,11 @@
   @media screen and (min-width: $tablet) {
     padding-right: 32px;
     padding-left: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 35px;
+    padding-left: 35px;
   }
 }
 
@@ -215,6 +256,11 @@
     margin-left: 15px;
     padding-right: 38px;
     padding-left: 38px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
