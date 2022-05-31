@@ -369,9 +369,14 @@
     }
   }
 
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+
   &::before {
-    display: block;
-    content: ' ';
+    display: inline-block;
+    content: '';
 
     position: relative;
     z-index: -1;
@@ -381,16 +386,22 @@
     border-radius: 50%;
 
     background-color: $bg-white;
+    transform: translate(300%, -70%);
 
     @media screen and (min-width: $desktop) {
       width: 30px;
       height: 30px;
+
+      transform: translate(280%, -70%);
     }
   }
+}
+
+.hero-number:first-child::before {
+  transform: translate(250%, -70%);
 
   @media screen and (min-width: $desktop) {
-    font-size: 46px;
-    line-height: 1.15;
+    transform: translate(230%, -70%);
   }
 }
 
