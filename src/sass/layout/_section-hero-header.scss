@@ -14,8 +14,6 @@
   &:focus {
     background-color: $button-bg-white-hover;
   }
-
-  margin-left: 32px;
 }
 
 .btn-buy-menu {
@@ -129,7 +127,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -195,6 +193,12 @@
 
     background-color: $boder-red;
   }
+
+  margin-right: 32px;
+
+  @media screen and (max-width: 767px) {
+    margin-right: 0px;
+  }
 }
 
 .header-burger::before {
@@ -218,6 +222,7 @@
   transform: scale(0);
 }
 .header-burger.active {
+  margin-right: 0px;
   order: 4;
 }
 
