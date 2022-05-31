@@ -50,6 +50,7 @@
 }
 
 .header {
+  background-color: $bg-hero;
   position: fixed;
   left: 0;
   top: 0;
@@ -224,11 +225,6 @@
 .header-burger.active {
   margin-right: 0px;
   order: 4;
-}
-
-.header-bg {
-  background-color: $bg-hero;
-  transition: 250ms ease;
 }
 
 // HERO
