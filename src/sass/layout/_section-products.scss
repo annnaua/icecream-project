@@ -35,15 +35,15 @@
     }
     &:hover.shadow-yellow {
       @media screen and (min-width: $desktop) {
-        transform: translateY(7px);
-        box-shadow: 0px 10px 5px -5px $product-shadow-yellow;
+        // transform: translateY(7px);
+        // box-shadow: 0px 10px 5px -5px $product-shadow-yellow;
         cursor: pointer;
       }
     }
     &:hover.shadow-green {
       @media screen and (min-width: $desktop) {
-        transform: translateY(7px);
-        box-shadow: 0px 10px 5px -5px $product-shadow-green;
+        // transform: translateY(7px);
+        // box-shadow: 0px 10px 5px -5px $product-shadow-green;
         cursor: pointer;
       }
     }
@@ -83,7 +83,7 @@
   background-color: $accent-green;
 }
 
-.product-box-first::before {
+.shadow-rose::after {
   position: absolute;
   top: 0;
   left: 50%;
@@ -122,7 +122,7 @@
     }
   }
 }
-.product-box-second::before {
+.shadow-yellow::after {
   position: absolute;
   top: 0;
   left: 50%;
@@ -162,7 +162,7 @@
   }
 }
 
-.product-box-third::before {
+.shadow-green::after {
   position: absolute;
   top: 0;
   left: 50%;
@@ -250,11 +250,10 @@
 
 @media screen and (min-width: 1280px) {
   .flipping-card {
-    position: relative;
-    perspective: 2000px;
+    perspective: 1000px;
   }
   .card-side {
-    transition: transform 750ms ease;
+    transition: transform 1000ms ease;
     backface-visibility: hidden;
   }
 
@@ -265,9 +264,23 @@
     width: 395px;
     height: 535px;
     border-radius: 24px;
-    padding: 75px;
-    background: linear-gradient(-40deg, $bg-hero-modal, $product-shadow-rose);
-    transform: rotateY(180deg);
+    padding: 165px 75px 0px 75px;
+
+    transform: rotateY(-180deg);
+  }
+
+  .back-rose {
+    background: linear-gradient(
+      to top left,
+      $bg-hero-modal,
+      $product-shadow-rose
+    );
+  }
+  .back-yellow {
+    background: linear-gradient(to top left, #e2a753, $product-shadow-yellow);
+  }
+  .back-green {
+    background: linear-gradient(to top left, #76a03e, $product-shadow-green);
   }
 
   .flipping-card:hover .card-side.front {
@@ -275,6 +288,15 @@
   }
   .flipping-card:hover .card-side.back {
     transform: rotateY(0deg);
+  }
+
+  .button-back-svg {
+    transform: scaleX(-1);
+  }
+}
+@media screen and (max-width: 1279px) {
+  .card-side.back {
+    display: none;
   }
 }
 
