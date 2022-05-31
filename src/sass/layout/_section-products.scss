@@ -52,7 +52,6 @@
 
 %product-box {
   width: 100%;
-  height: 535px;
   padding: 160px 40px 40px 40px;
   border-radius: 24px;
   text-align: center;
@@ -61,6 +60,7 @@
     padding: 118px 32px 40px 32px;
   }
   @media screen and (min-width: $desktop) {
+    height: 535px;
     padding: 165px 75px 60px 75px;
   }
 }
@@ -246,9 +246,9 @@
   margin-right: auto;
   margin-left: auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media screen and (max-width: 1279px) {
+    margin-top: 32px;
+  }
 }
 
 @media screen and (min-width: $desktop) {
@@ -259,6 +259,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    height: 535px;
 
     transition: transform 1000ms ease 250ms;
     backface-visibility: hidden;
@@ -273,7 +275,6 @@
     top: 261px;
     left: 0;
     width: 395px;
-    height: 535px;
     border-radius: 24px;
     padding: 165px 75px 60px 75px;
 
