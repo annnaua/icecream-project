@@ -152,15 +152,26 @@ address {
 // is-hidden
 
 .is-hidden {
-  visibility: hidden;
   position: absolute;
-  top: -100%;
 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+
+  margin: -1px;
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+
+  overflow: hidden;
   pointer-events: none;
 }
 
 // no-scroll
 
 .no-scroll {
-  overflow: hidden;
+  overflow-y: hidden;
+  padding-right: 15px;
 }
