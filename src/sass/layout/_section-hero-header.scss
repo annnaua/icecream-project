@@ -353,8 +353,9 @@
   }
 }
 
-.hero-numder {
+.hero-number {
   position: relative;
+
   font-family: $title-font;
   font-size: 28px;
   line-height: 1.14;
@@ -369,19 +370,21 @@
   }
 
   &::before {
-    display: inline-block;
-    position: relative;
+    display: block;
     content: ' ';
-    background-color: $bg-white;
+
+    position: relative;
+    z-index: -1;
+
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    transform: translate(300%, -80%);
-    z-index: -1;
+
+    background-color: $bg-white;
+
     @media screen and (min-width: $desktop) {
       width: 30px;
       height: 30px;
-      transform: translate(280%, -70%);
     }
   }
 
