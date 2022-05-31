@@ -61,7 +61,13 @@
 .footer-soc-item {
   width: 32px;
   height: 32px;
+
   border-radius: 50%;
+
+  @media screen and (min-width: $tablet) {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .footer-soc-item:not(:last-child) {
@@ -82,11 +88,6 @@
 
   color: $rose;
   fill: currentColor;
-
-  @media screen and (min-width: $tablet) {
-    width: 34px;
-    height: 34px;
-  }
 
   &:hover,
   &:focus {
