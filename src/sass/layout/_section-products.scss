@@ -248,12 +248,12 @@
   margin-left: auto;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: $desktop) {
   .flipping-card {
     perspective: 1000px;
   }
   .card-side {
-    transition: transform 1000ms ease;
+    transition: transform 1000ms ease 250ms;
     backface-visibility: hidden;
   }
 
@@ -264,7 +264,7 @@
     width: 395px;
     height: 535px;
     border-radius: 24px;
-    padding: 165px 75px 0px 75px;
+    padding: 165px 75px 60px 75px;
 
     transform: rotateY(-180deg);
   }
