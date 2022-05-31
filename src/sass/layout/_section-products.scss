@@ -283,15 +283,23 @@
   .back-rose {
     background: linear-gradient(
       to top left,
-      $bg-hero-modal,
+      $product-top-rose,
       $product-shadow-rose
     );
   }
   .back-yellow {
-    background: linear-gradient(to top left, #e2a753, $product-shadow-yellow);
+    background: linear-gradient(
+      to top left,
+      #$product-top-yellow,
+      $product-shadow-yellow
+    );
   }
   .back-green {
-    background: linear-gradient(to top left, #76a03e, $product-shadow-green);
+    background: linear-gradient(
+      to top left,
+      #$product-top-green,
+      $product-shadow-green
+    );
   }
 
   .flipping-card:hover .card-side.front {
