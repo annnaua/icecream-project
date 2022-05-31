@@ -9,12 +9,16 @@
   });
 })();
 
-const pageHeader = document.querySelector('.header');
-
+const pageHeader = document.querySelector('header');
+document.addEventListener('DOMContentLoaded', e => {
+  if (window.scrollY < 1) {
+    pageHeader.style.backgroundColor = 'transparent';
+  }
+});
 window.addEventListener('scroll', e => {
   if (window.scrollY > 0) {
-    pageHeader.classList.add('header-bg');
+    pageHeader.style.backgroundColor = '#ffb8ca';
   } else {
-    pageHeader.classList.remove('header-bg');
+    pageHeader.style.backgroundColor = 'transparent';
   }
 });
