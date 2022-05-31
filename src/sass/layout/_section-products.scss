@@ -243,8 +243,7 @@
 }
 
 .button-circle-large {
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0px auto;
 
   @media screen and (max-width: 1279px) {
     margin-top: 32px;
