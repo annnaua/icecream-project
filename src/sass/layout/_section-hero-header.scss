@@ -1,4 +1,6 @@
-.header-btn-buy.btn-buy-menu {
+.btn-buy-menu {
+  width: 100%;
+  max-width: 300px;
   @media screen and (min-width: $desktop) {
     display: none;
   }
@@ -17,11 +19,15 @@
 }
 
 .btn-buy-menu {
-  margin-bottom: 18px;
+  margin: 26 auto 18;
 }
-
+.header-menu.active .header-btn-buy {
+  @media screen and (max-width: 1279px) {
+    display: block;
+  }
+}
 .header-btn-buy {
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }
@@ -89,17 +95,18 @@
       margin-left: 35px;
     }
   }
-
-  &-menu.active &-item {
+}
+.header-menu.active .header-item {
+  @media screen and (max-width: 1279px) {
     padding: 12px 0px;
-
     width: 100%;
     border-bottom: 1px solid $border-rose;
-
-    &:first-child {
-      padding-top: 12px;
-      border-top: 1px solid $border-rose;
-    }
+  }
+}
+.header:first-child {
+  @media screen and (max-width: 1279px) {
+    padding-top: 12px;
+    border-top: 1px solid $border-rose;
   }
 }
 
@@ -127,20 +134,23 @@
     overflow: auto;
   }
 
-  @media screen and (min-width: $tablet) {
-    width: 50%;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 38%;
   }
 }
 
 .header-menu.active {
-  padding: 60px 20px;
-
+  padding: 20px 20px;
+  text-align: right;
   transform: translate(0);
 }
 
 // links
 
 .header-link {
+  @media screen and (min-width: $desktop) {
+    padding: 35px 0;
+  }
   color: $text-white;
 
   &:hover,
@@ -154,78 +164,97 @@
 }
 
 // burger
-
-.header-burger {
-  display: block;
-
-  position: relative;
-  z-index: 110;
-
-  width: 20px;
-  height: 12px;
-
-  cursor: pointer;
-
+.header-btn-burger {
+  @media screen and (min-width: $tablet) {
+    margin-right: 32px;
+  }
   @media screen and (min-width: $desktop) {
     display: none;
   }
-
-  & span {
-    position: absolute;
-    top: 5px;
-    left: 0;
-
-    width: 100%;
-    height: 1px;
-
-    background-color: $boder-red;
-  }
-
-  &::before,
-  &::after {
-    display: block;
-    content: '';
-
-    position: absolute;
-    left: 0;
-
-    width: 100%;
-    height: 1px;
-
-    background-color: $boder-red;
-  }
-
-  margin-right: 32px;
-
-  @media screen and (max-width: 767px) {
-    margin-right: 0px;
+}
+.burger-icon {
+  fill: $button-bg-red;
+}
+.header-menu-btn-close {
+  @media screen and (min-width: $desktop) {
+    display: none;
   }
 }
 
-.header-burger::before {
-  top: 0;
+.close-icon {
+  fill: $button-bg-white;
 }
-.header-burger::after {
-  bottom: 0;
-}
+// .header-burger {
+//   display: block;
 
-.header-burger.active::before {
-  transform: rotate(45deg);
-  top: 5px;
-  background-color: $button-bg-white;
-}
-.header-burger.active::after {
-  transform: rotate(-45deg);
-  bottom: 6px;
-  background-color: $button-bg-white;
-}
-.header-burger.active span {
-  transform: scale(0);
-}
-.header-burger.active {
-  margin-right: 0px;
-  order: 4;
-}
+//   position: relative;
+//   z-index: 110;
+
+//   width: 20px;
+//   height: 12px;
+
+//   cursor: pointer;
+
+//   @media screen and (min-width: $desktop) {
+//     display: none;
+//   }
+
+//   & span {
+//     position: absolute;
+//     top: 5px;
+//     left: 0;
+
+//     width: 100%;
+//     height: 1px;
+
+//     background-color: $boder-red;
+//   }
+
+//   &::before,
+//   &::after {
+//     display: block;
+//     content: '';
+
+//     position: absolute;
+//     left: 0;
+
+//     width: 100%;
+//     height: 1px;
+
+//     background-color: $boder-red;
+//   }
+
+//   margin-right: 32px;
+
+//   @media screen and (max-width: 767px) {
+//     margin-right: 0px;
+//   }
+// }
+
+// .header-burger::before {
+//   top: 0;
+// }
+// .header-burger::after {
+//   bottom: 0;
+// }
+
+// .header-burger.active::before {
+//   transform: rotate(45deg);
+//   top: 5px;
+//   background-color: $button-bg-white;
+// }
+// .header-burger.active::after {
+//   transform: rotate(-45deg);
+//   bottom: 6px;
+//   background-color: $button-bg-white;
+// }
+// .header-burger.active span {
+//   transform: scale(0);
+// }
+// .header-burger.active {
+//   margin-right: 0px;
+//   order: 4;
+// }
 
 // HERO
 
