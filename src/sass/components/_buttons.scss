@@ -65,20 +65,7 @@
     padding: 11px 23px;
   }
 }
-.header-btn-buy {
-  display: inline-block;
 
-  width: 100%;
-  max-width: 209px;
-  height: 44px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  border-radius: 22px;
-
-  background-color: #fff;
-  color: $red;
-}
 .button-hero-white {
   @extend %button-hero;
 

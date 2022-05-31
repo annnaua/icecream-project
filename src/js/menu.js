@@ -8,3 +8,13 @@
     body.classList.toggle('lock');
   });
 })();
+
+const pageHeader = document.querySelector('.header');
+
+window.addEventListener('scroll', e => {
+  if (window.scrollY > 0) {
+    pageHeader.classList.add('header-bg');
+  } else {
+    pageHeader.classList.remove('header-bg');
+  }
+});

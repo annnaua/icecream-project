@@ -1,157 +1,79 @@
-// HEADER
-
-.btn-buy {
-  z-index: 4;
-  margin-left: 32px;
-  width: 160px;
-  @media screen and (max-width: 767px) {
+.header-btn-buy.btn-buy-menu {
+  @media screen and (min-width: $desktop) {
     display: none;
+  }
+}
+
+.header-btn-buy {
+  @extend %button;
+
+  background-color: $button-bg-white;
+  color: $text-red;
+
+  &:hover,
+  &:focus {
+    background-color: $button-bg-white-hover;
   }
 }
 
 .btn-buy-menu {
-  @media screen and (min-width: 1280px) {
+  margin-bottom: 18px;
+}
+
+.header-btn-buy {
+  @media screen and (max-width: 769px) {
     display: none;
   }
-  @media screen and (max-width: 767px) {
-    max-width: 90%;
-  }
-  @media screen and (min-width: 768px) {
-    margin-left: 20px;
-  }
-  margin-bottom: 32px;
 }
+
 .container-header {
   position: relative;
 }
 
+// HEADER BODY
+
+.header-body {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 60px;
+
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 100px;
+    justify-content: space-between;
+  }
+}
+
 .header {
-  padding-top: 15px;
   position: fixed;
-  width: 100%;
   left: 0;
   top: 0;
-  z-index: 99;
-  @media screen and (min-width: 768px) {
-    padding-top: 35px;
-  }
+  z-index: 100;
+
+  width: 100%;
+  background-color: transparent;
 
   &-logo {
-    z-index: 3;
-
     @media screen and (max-width: 1279px) {
       margin-right: auto;
     }
   }
+
   &-btn-icon {
     margin-left: 15px;
   }
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffb8ca;
-    z-index: 2;
-  }
-  &-body {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    @media screen and (min-width: 1280px) {
-      justify-content: space-between;
-    }
-    @media screen and (min-width: 768px) {
-      padding-bottom: 35px;
-    }
-    @media screen and (max-width: 767px) {
-      height: 50px;
-      padding-bottom: 18px;
-    }
-  }
 
-  &-burger {
-    display: none;
-    @media screen and (max-width: 1279px) {
-      display: block;
-      position: relative;
-      width: 20px;
-      height: 12px;
-      z-index: 6;
-      cursor: pointer;
-    }
-  }
-  &-burger span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    top: 5px;
-    background-color: $red;
-  }
-  &-burger::before,
-  &-burger::after {
-    content: '';
-    background-color: $red;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: 0;
-  }
-  &-burger::before {
-    top: 0;
-  }
-  &-burger::after {
-    bottom: 0;
-  }
-  &-burger.active::before {
-    transform: rotate(45deg);
-    top: 5px;
-    background-color: $button-bg-white;
-  }
-  &-burger.active::after {
-    transform: rotate(-45deg);
-    bottom: 6px;
-    background-color: $button-bg-white;
-  }
-  &-burger.active span {
-    transform: scale(0);
-  }
-  &-burger.active {
-    order: 4;
-  }
-
-  &-menu {
-    @media screen and (max-width: 1279px) {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 5;
-      transform: translateX(100%);
-      width: 100%;
-      height: 100%;
-      background-color: $bg-hero-modal;
-      padding: 60px 0;
-      transition: 250ms;
-      overflow: auto;
-      @media screen and (max-width: 767px) {
-        text-align: center;
-      }
-    }
-  }
-  &-menu.active {
-    transform: translateX(0);
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-      transform: translateX(60%);
-    }
-  }
   &-list {
     position: relative;
-    z-index: 2;
+    z-index: 10;
+
     display: flex;
+
     @media screen and (max-width: 1279px) {
       flex-direction: column;
       text-align: left;
@@ -166,24 +88,147 @@
       margin-left: 35px;
     }
   }
-  &-link {
-    color: $text-white;
-  }
-  &-link:hover,
-  &-link:focus {
-    color: $text-red;
-  }
+
   &-menu.active &-item {
-    padding-left: 20px;
-    padding-bottom: 12px;
+    padding: 12px 0px;
 
     width: 100%;
     border-bottom: 1px solid $border-rose;
+
     &:first-child {
       padding-top: 12px;
       border-top: 1px solid $border-rose;
     }
   }
+}
+
+// header menu active
+
+.header-menu {
+  @media screen and (max-width: 1279px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 60px 20px;
+    background-color: $bg-hero-modal;
+
+    transform: translateX(100%);
+
+    transition: 250ms;
+    transition-property: transform;
+    transition-timing-function: ease;
+
+    overflow: auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+  }
+}
+
+.header-menu.active {
+  padding: 60px 20px;
+
+  transform: translate(0);
+}
+
+// links
+
+.header-link {
+  color: $text-white;
+
+  &:hover,
+  &:focus {
+    color: $text-red;
+  }
+
+  &.header-link-current {
+    color: $text-red;
+  }
+}
+
+// burger
+
+.header-burger {
+  display: block;
+
+  position: relative;
+  z-index: 110;
+
+  width: 20px;
+  height: 12px;
+
+  cursor: pointer;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  & span {
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $boder-red;
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    content: '';
+
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $boder-red;
+  }
+
+  margin-right: 32px;
+
+  @media screen and (max-width: 767px) {
+    margin-right: 0px;
+  }
+}
+
+.header-burger::before {
+  top: 0;
+}
+.header-burger::after {
+  bottom: 0;
+}
+
+.header-burger.active::before {
+  transform: rotate(45deg);
+  top: 5px;
+  background-color: $button-bg-white;
+}
+.header-burger.active::after {
+  transform: rotate(-45deg);
+  bottom: 6px;
+  background-color: $button-bg-white;
+}
+.header-burger.active span {
+  transform: scale(0);
+}
+.header-burger.active {
+  margin-right: 0px;
+  order: 4;
+}
+
+.header-bg {
+  background-color: $bg-hero;
+  transition: 250ms ease;
 }
 
 // HERO
@@ -193,30 +238,31 @@
 }
 
 .hero-container {
-  padding-top: 194px;
-  padding-bottom: 158px;
   position: relative;
+
+  padding-top: 200px;
+  padding-bottom: 150px;
   background-color: $bg-hero;
+
   @media screen and (min-width: $tablet) {
-    padding-top: 102px;
-    padding-bottom: 56px;
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
   @media screen and (min-width: $desktop) {
-    padding-top: 147px;
-    padding-bottom: 84px;
+    padding-top: 140px;
+    padding-bottom: 80px;
   }
-
 }
 
 .hero-wrapper {
   position: relative;
   z-index: 2;
-    @media screen and (min-width: $tablet) {
-      margin-bottom: 61px;
-    }
-    @media screen and (min-width: $desktop) {
-      margin-bottom: 108px;
-    }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 61px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 108px;
+  }
 }
 
 .hero-title {
@@ -236,7 +282,6 @@
     font-size: 38px;
     line-height: 1.16;
   }
-
 }
 
 .hero-title-other {
@@ -256,7 +301,7 @@
 .hero-wrapper-button {
   display: flex;
   margin-top: 20px;
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     margin-top: 24px;
   }
 }
@@ -273,7 +318,7 @@
     position: relative;
     margin-left: 152px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     margin-left: 229px;
   }
 }
@@ -290,13 +335,13 @@
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: 20px;
-    }
+  }
 }
 
 .hero-wrapper-number {
   display: none;
   position: relative;
-  
+
   @media screen and (min-width: $tablet) {
     position: absolute;
     top: 92px;
@@ -306,7 +351,7 @@
     text-align: right;
   }
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     top: 153px;
     right: 35px;
   }
@@ -319,11 +364,10 @@
   line-height: 1.14;
   letter-spacing: 0.04em;
   color: $text-red;
- 
 
   &:not(:last-child) {
     margin-bottom: 16px;
-    @media screen and (min-width: $desktop){
+    @media screen and (min-width: $desktop) {
       margin-bottom: 15px;
     }
   }
@@ -338,18 +382,16 @@
     border-radius: 50%;
     transform: translate(300%, -80%);
     z-index: -1;
-    @media screen and (min-width: $desktop){
+    @media screen and (min-width: $desktop) {
       width: 30px;
       height: 30px;
       transform: translate(280%, -70%);
     }
   }
 
-
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     font-size: 46px;
     line-height: 1.15;
-
   }
 }
 
@@ -359,12 +401,11 @@
   font-size: 8px;
   line-height: 1.25;
   color: $text-white;
-  
-  @media screen and (min-width: $desktop) {
-      font-size: 14px;
-      line-height: 1.29;
 
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 
 .img-cream {
@@ -384,11 +425,11 @@
     height: 336px;
   }
 
-   @media screen and (min-width: $desktop){
-      right: 428px;
-      width: 236px;
-      height: 557px;
-   }
+  @media screen and (min-width: $desktop) {
+    right: 428px;
+    width: 236px;
+    height: 557px;
+  }
 }
 
 .img-circle {
@@ -406,7 +447,7 @@
     width: 335px;
     height: 333px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     bottom: 76px;
     right: 249px;
     width: 534px;
@@ -424,12 +465,11 @@
     width: 190px;
     height: 150px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     right: 16px;
     width: 304px;
     height: 241px;
   }
-
 }
 
 .img-milk {
@@ -442,22 +482,20 @@
     width: 152px;
     height: 154px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     bottom: 60px;
     right: 1051px;
 
     width: 213px;
     height: 216px;
   }
-
 }
 
 .hero-icon {
   width: 5px;
   height: 5px;
-@media screen and (min-width: $desktop) {
-  width: 10px;
-  height: 10px;
-}
-
+  @media screen and (min-width: $desktop) {
+    width: 10px;
+    height: 10px;
+  }
 }
