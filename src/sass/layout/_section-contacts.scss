@@ -76,15 +76,6 @@
   }
 }
 
-.city-wrap {
-  padding-bottom: 24px;
-  border-bottom: 1px solid $border-gray;
-
-  @media screen and (min-width: $tablet) {
-    padding-bottom: 32px;
-  }
-}
-
 .city-wrap-title {
   margin-bottom: 8px;
 
@@ -126,10 +117,14 @@
 
 .work-wrap {
   padding: 24px 0;
+  margin: 24px 0px;
+
+  border-top: 1px solid $border-gray;
   border-bottom: 1px solid $border-gray;
 
   @media screen and (min-width: $tablet) {
     padding-top: 32px 0;
+    margin: 32px 0px;
   }
 }
 
@@ -168,14 +163,6 @@
 
   @media screen and (min-width: $desktop) {
     font-size: 16px;
-  }
-}
-
-.link-wrap {
-  padding-top: 24px;
-
-  @media screen and (min-width: $tablet) {
-    padding-top: 32px;
   }
 }
 
