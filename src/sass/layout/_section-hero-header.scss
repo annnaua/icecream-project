@@ -337,7 +337,7 @@
   }
 }
 
-.hero-wrapper-button {
+.hero-button-list {
   display: flex;
   margin-top: 20px;
   @media screen and (min-width: $desktop) {
@@ -377,11 +377,12 @@
   }
 }
 
-.hero-wrapper-number {
+.hero-number-list {
   display: none;
   position: relative;
 
   @media screen and (min-width: $tablet) {
+    
     position: absolute;
     top: 92px;
     right: 32px;
@@ -396,6 +397,37 @@
   }
 }
 
+.hero-numder-item{
+&:not(:last-child) {
+    margin-bottom: 17px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &::before {
+      content: '';
+    display: inline-block;
+      position: absolute;
+      z-index: -1;
+  
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+  
+      background-color: $bg-white;
+      transform: translate(-50%, -20%);
+  
+      @media screen and (min-width: $desktop) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+}
+
+
+
 .hero-number {
   position: relative;
 
@@ -405,48 +437,13 @@
   letter-spacing: 0.04em;
   color: $text-red;
 
-  &:not(:last-child) {
-    margin-bottom: 16px;
-    @media screen and (min-width: $desktop) {
-      margin-bottom: 15px;
-    }
-  }
-
   @media screen and (min-width: $desktop) {
     font-size: 46px;
     line-height: 1.15;
   }
 
-  &::before {
-    display: inline-block;
-    content: '';
-
-    position: relative;
-    z-index: -1;
-
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-
-    background-color: $bg-white;
-    transform: translate(300%, -70%);
-
-    @media screen and (min-width: $desktop) {
-      width: 30px;
-      height: 30px;
-
-      transform: translate(280%, -70%);
-    }
-  }
 }
 
-.hero-number:first-child::before {
-  transform: translate(250%, -70%);
-
-  @media screen and (min-width: $desktop) {
-    transform: translate(230%, -70%);
-  }
-}
 
 .hero-number-text {
   display: block;
