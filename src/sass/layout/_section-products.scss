@@ -122,6 +122,7 @@
     }
   }
 }
+
 .shadow-yellow::after {
   position: absolute;
   top: 0;
@@ -190,6 +191,7 @@
       background-image: url('../images/tablet/product3-img-tablet@2x.png');
     }
   }
+
   @media screen and (min-width: $desktop) {
     width: 394px;
     height: 394px;
@@ -233,6 +235,8 @@
   letter-spacing: 0.04em;
   color: $text-white;
 
+  text-align: center;
+
   @media screen and (min-width: $tablet) {
     line-height: 1.79;
   }
@@ -254,6 +258,7 @@
   .flipping-card {
     perspective: 1000px;
   }
+
   .card-side {
     display: flex;
     flex-direction: column;
@@ -287,6 +292,7 @@
       $product-shadow-rose
     );
   }
+
   .back-yellow {
     background: linear-gradient(
       to top left,
@@ -294,6 +300,7 @@
       $product-shadow-yellow
     );
   }
+
   .back-green {
     background: linear-gradient(
       to top left,
@@ -313,6 +320,7 @@
     transform: scaleX(-1);
   }
 }
+
 @media screen and (max-width: 1279px) {
   .card-side.back {
     display: none;
