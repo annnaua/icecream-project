@@ -4,12 +4,10 @@
   height: 100%;
   left: 0px;
   top: 0px;
-
   background-color: rgba(47, 47, 47, 0.8);
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: ease;
-
   z-index: 200;
 }
 
@@ -19,46 +17,47 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 90%;
   padding: 20px;
   border-radius: 20px;
-
   background-color: $bg-rose-light;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
   @media screen and (min-width: $mobile) {
-      padding: 30px;
-      max-width: 470px;
+    padding: 30px;
+    max-width: 470px;
+    @media screen and (orientation: landscape) {
+        padding: 10px;
+      }
   }
+
   @media screen and (min-width: $tablet) {
     padding: 30px;
     max-width: 540px;
   }
+
   @media screen and (min-width: $desktop) {
     padding: 40px;
     max-width: 570px;
   }
+
+  
 }
 
 .btn-mod {
   position: absolute;
   top: 15px;
   right: 15px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   box-sizing: border-box;
-
   width: 25px;
   height: 25px;
-
   border: 2px solid $border-rose-light;
   border-radius: 50%;
   background-color: transparent;
-
   cursor: pointer;
 
   @media screen and (min-width: $desktop) {
@@ -87,7 +86,7 @@
     fill: $bg-white;
   }
 
-  .btn-mod:focus + .btn-icon {
+  .btn-mod:focus+.btn-icon {
     fill: $bg-white;
   }
 }
@@ -95,39 +94,54 @@
 .modal-header,
 .map-header {
   display: block;
-
   font-size: 18px;
   font-weight: 700;
   line-height: 1.15;
-
   color: $text-red;
   text-align: center;
   text-transform: uppercase;
-
   margin: 30px 0px;
+
+  @media screen and (min-width: $mobile) {
+      @media screen and (orientation: landscape) {
+        margin: 10px 0px;
+      }
+    }
 
   @media screen and (min-width: $tablet) {
     font-size: 20px;
+    margin: 30px 0px;
   }
+
   @media screen and (min-width: $desktop) {
     font-size: 24px;
   }
+  
+  
 }
 
 .map-header {
   margin: 10px 0px 20px;
+
+  @media screen and (min-width: $mobile) {
+    @media screen and (orientation: landscape) {
+      margin: 8px 0px;
+      font-size: 15px;
+        }
+  }
+  @media screen and (min-width: $tablet) {
+    margin: 10px 0px 20px;
+  }
 }
 
 .modal-text {
   display: flex;
-
   font-size: 10px;
   line-height: 1.67;
   text-transform: uppercase;
   font-weight: 500;
   color: $text-rose-gray;
   margin-top: 8px;
-
   transition: 250ms ease color;
 
   @media screen and (min-width: $tablet) {
@@ -143,13 +157,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   font-size: 12px;
   line-height: 1.67;
   font-weight: 500;
   letter-spacing: 0.025em;
   color: $text-rose-gray;
-
   width: 100%;
   text-transform: uppercase;
 
@@ -166,6 +178,7 @@
 .text-franchise {
   margin-left: 8px;
   width: 70px;
+
   @media screen and (min-width: $tablet) {
     width: 100px;
   }
@@ -178,13 +191,12 @@
   font-size: 15px;
   line-height: 1.67;
   letter-spacing: 0.01em;
-
   color: $text-rose-gray;
 }
 
 .radio-list-product {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
 }
 
 .radio-list {
@@ -207,28 +219,22 @@
 .modal-area {
   box-sizing: border-box;
   outline: none;
-
-  width: 250px;
-  @media screen and (min-width: $mobile) {
-    width: 280px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    width: 320px;
-    }
-
-  @media screen and (min-width: $desktop) {
-    width: 320px;
-  }
-
+  width: 100%;
   height: 40px;
   padding: 10px;
   margin-left: 12px;
-
   background-color: $bg-rose-light;
   border: 2px solid $border-rose-light;
   border-radius: 4px;
-}
+
+  @media screen and (min-width: $mobile){
+  @media screen and (orientation: landscape) {
+    height: 30px;
+  }
+    @media screen and (min-width: $tablet) {
+      height: 40px;
+    }
+}}
 
 .modal-inp:focus-within,
 .modal-area:focus-within {
@@ -240,33 +246,71 @@
   color: $text-red;
 }
 
+.lable-text {
+  min-width: 70px;
+
+  @media screen and (min-width: $mobile) {
+    width: 120px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 145px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 150px;
+  }
+
+}
+
 .modal-area {
   height: 60px;
+
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+    height: 40px;
+  }}
+  @media screen and (min-width: $tablet) {
+    height: 60px;
+  }
   @media screen and (min-width: $desktop) {
     height: 80px;
   }
+
+
   resize: none;
 }
 
 .form-bloc {
   position: relative;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
   width: 100%;
   padding: 0 10px;
-@media screen and (min-width: $mobile) {
-    padding: 0 20px;
-  }
-
   margin-bottom: 12px;
+  @media screen and (min-width: $mobile) {
+    padding: 0 20px;
+  @media screen and (orientation: landscape) {
+    margin-bottom: 5px;
+  }}
+    @media screen and (min-width: $tablet) {
+  margin-bottom: 12px;
+    }
 }
 
 .form-radio {
   margin-top: 20px;
   margin-bottom: 20px;
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape){
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }}
+  @media screen and (min-width: $tablet) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  }
 }
 
 .inp-check {
@@ -274,35 +318,60 @@
   position: absolute;
 }
 
-.inp-check:checked + .radio-icon,
-.inp-check:checked + .delivery-icon {
+.inp-check:checked+.radio-icon,
+.inp-check:checked+.delivery-icon {
   fill: $button-bg-red-hover;
 }
 
-.inp-check:checked ~ .modal-text {
+.inp-check:checked~.modal-text {
   color: $text-red;
 }
 
 .radio-icon {
+  width: 60px;
+  height: 60px;
   margin: 0 auto;
   fill: $rose-gray;
-
   transition: 250ms ease fill;
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+  width: 30px;
+  height: 30px;
+}}
+  @media screen and (min-width: $tablet) {
+  width: 60px;
+  height: 60px;
+  }
 }
 
 .delivery-icon {
   width: 40px;
   height: 40px;
+
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+  width: 30px;
+  height: 30px;
+      }
+    }
   @media screen and (min-width: $tablet) {
     width: 50px;
     height: 50px;
   }
+
   margin: 0 auto;
   fill: $rose-gray;
+
 }
 
 .button-send {
   margin: 40px auto 0;
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+  margin: 12px auto 0;
+  }}
+    @media screen and (min-width: $tablet) {
+    margin: 40px auto 0;}
 }
 
 .container-read {
@@ -315,6 +384,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
 .read-item:not(:last-child) {
   margin-bottom: 20px;
 
@@ -325,6 +395,10 @@
 
 .read-image {
   width: 100%;
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+    width: 70%;
+  }}
 }
 
 .read-thumb {
@@ -338,6 +412,9 @@
 
   @media screen and (min-width: $mobile) {
     font-size: 14px;
+    @media screen and (orientation: landscape) {
+        font-size: 12px;
+      }
   }
 
   @media screen and (min-width: $tablet) {
@@ -347,6 +424,7 @@
   @media screen and (min-width: $desktop) {
     font-size: 17px;
   }
+  
 }
 
 .modal-map {
@@ -354,19 +432,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 90%;
   padding: 20px;
   border-radius: 20px;
-
   background-color: $bg-rose-light;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
+  @media screen and (min-width: $mobile) {  
+  @media screen and (orientation: landscape) {
+    padding: 10px;
+  }}
   @media screen and (min-width: $tablet) {
     padding: 30px;
     max-width: 540px;
   }
+
   @media screen and (min-width: $desktop) {
     padding: 40px;
     max-width: 570px;
@@ -377,15 +458,24 @@
   min-width: 100px;
   height: 150px;
   margin-left: 5px;
+
   @media screen and (min-width: $mobile) {
     width: 300px;
+  @media screen and (orientation: landscape) {
+      height: 90px;
+      width: 80%;
+    }
   }
+
   @media screen and (min-width: $tablet) {
+    height: 150px;
     width: 330px;
   }
+
   @media screen and (min-width: $desktop) {
     width: 350px;
   }
+
 }
 
 .map:nth-child(2n + 1) {
@@ -400,9 +490,21 @@
 
 .adress-list:not(:first-child) {
   margin-top: 20px;
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+    margin-top: 5px;
+  }}
+  @media screen and (min-width: $tablet) {
+  margin-top: 20px;
+  }
 }
+
 .adress-title {
   font-size: 10px;
+@media screen and (min-width: $mobile) {
+@media screen and (orientation: landscape) {
+  font-size: 7px;
+  }}
 }
 
 .adress-title:not(:first-child) {
@@ -418,11 +520,25 @@
 .adress-link {
   padding-top: 0;
   text-align: center;
+  @media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+    display: none;
+  }}
+@media screen and (min-width: $tablet) {
+  display: inline;
+}
 }
 
 .map-adress {
   font-size: 16px;
   color: $text-red;
+@media screen and (min-width: $mobile) {
+  @media screen and (orientation: landscape) {
+    font-size: 10px;
+  }}
+@media screen and (min-width: $tablet) {
+  font-size: 16px;
+}
 }
 
 .franchise-label {
