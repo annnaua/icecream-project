@@ -195,16 +195,16 @@
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
-    padding-top: 32px;
+    margin-top: 32px;
   }
 
   @media screen and (min-width: $tablet) {
     justify-content: center;
-    padding-top: 40px;
+    margin-top: 40px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding-top: 60px;
+    margin-top: 60px;
   }
 }
 
