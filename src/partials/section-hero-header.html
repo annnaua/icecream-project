@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="container">
+  <div class="container header-container">
     <nav class="header-body">
       <a href="./index.html" class="header-logo">
         <img src="./images/logo.svg" alt="logo site" width="200" height="50" />
@@ -9,9 +9,6 @@
           <use href="./images/icons/icons.svg#burger"></use>
         </svg>
       </button>
-      <!-- <div class="header-burger">
-        <span></span>
-      </div> -->
 
       <div class="header-menu">
         <button class="header-menu-btn-close" type="button">
@@ -44,14 +41,13 @@
           </li>
         </ul>
       </div>
-
-      <button class="header-btn-buy btn-buy" type="button" data-buy-open>
-        Buy now
-        <svg class="header-btn-icon" width="6" height="8">
-          <use href="./images/icons/icons.svg#icon-arrow-button"></use>
-        </svg>
-      </button>
     </nav>
+    <button class="header-btn-buy btn-buy" type="button" data-buy-open>
+      Buy now
+      <svg class="header-btn-icon" width="6" height="8">
+        <use href="./images/icons/icons.svg#icon-arrow-button"></use>
+      </svg>
+    </button>
   </div>
 </header>
 
@@ -77,7 +73,9 @@
       </p>
       <button type="button" class="button-circle-small">
         <svg class="hero-icon">
-          <use href="./images/icons/icomoon/symbol-defs.svg#icon-arrow-button-circle"></use>
+          <use
+            href="./images/icons/icomoon/symbol-defs.svg#icon-arrow-button-circle"
+          ></use>
         </svg>
       </button>
     </div>
@@ -89,63 +87,105 @@
     </div>
 
     <picture>
-      <source media="(min-width: 1280px)" srcset="
+      <source
+        media="(min-width: 1280px)"
+        srcset="
           ./images/desktop/hero-cream-img-desktop.png    1x,
           ./images/desktop/hero-cream-img-desktop@2x.png 2x
-        " />
-      <source media="(min-width: 768px)" srcset="
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
           ./images/tablet/hero-cream-img-tablet.png    1x,
           ./images/tablet/hero-cream-img-tablet@2x.png 2x
-        " />
-      <source media="(min-width: 320px)" srcset="
+        "
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="
           ./images/mobile/hero-cream-img-mobile.png    1x,
           ./images/mobile/hero-cream-img-mobile@2x.png 2x
-        " />
-      <img class="img-cream animate__animated animate__bounceInDown animate__slow"
-        src="./images/mobile/hero-cream-img-mobile.png" alt="мороженное" />
+        "
+      />
+      <img
+        class="img-cream animate__animated animate__bounceInDown animate__slow"
+        src="./images/mobile/hero-cream-img-mobile.png"
+        alt="мороженное"
+      />
     </picture>
 
     <picture>
-      <source media="(min-width: 1280px)" srcset="
+      <source
+        media="(min-width: 1280px)"
+        srcset="
           ./images/desktop/hero-circle-img-desktop.png    1x,
           ./images/desktop/hero-circle-img-desktop@2x.png 2x
-        " />
-      <source media="(min-width: 481px)" srcset="
+        "
+      />
+      <source
+        media="(min-width: 481px)"
+        srcset="
           ./images/tablet/hero-circle-img-tablet.png    1x,
           ./images/tablet/hero-circle-img-tablet@2x.png 2x
-        " />
-      <source media="(min-width: 320px)" srcset="
+        "
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="
           ./images/mobile/hero-circle-img-mobile.png    1x,
           ./images/mobile/hero-circle-img-mobile@2x.png 2x
-        " />
-      <img class="img-circle animate__animated animate__pulse animate__repeat-3 animate__slow"
-        src="./images/mobile/hero-circle-img-mobile.png" alt="круг" />
+        "
+      />
+      <img
+        class="img-circle animate__animated animate__pulse animate__repeat-3 animate__slow"
+        src="./images/mobile/hero-circle-img-mobile.png"
+        alt="круг"
+      />
     </picture>
 
     <picture>
-      <source media="(min-width: 1280px)" srcset="
+      <source
+        media="(min-width: 1280px)"
+        srcset="
           ./images/desktop/hero-milk-img-desktop.png    1x,
           ./images/desktop/hero-milk-img-desktop@2x.png 2x
-        " />
-      <source media="(min-width: 768px)" srcset="
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
           ./images/tablet/hero-milk-img-tablet.png    1x,
           ./images/tablet/hero-milk-img-tablet@2x.png 2x
-        " />
-      <img class="img-milk animate__animated animate__lightSpeedInLeft" src="./images/tablet/hero-milk-img-tablet.png"
-        alt="молоко" />
+        "
+      />
+      <img
+        class="img-milk animate__animated animate__lightSpeedInLeft"
+        src="./images/tablet/hero-milk-img-tablet.png"
+        alt="молоко"
+      />
     </picture>
 
     <picture>
-      <source media="(min-width: 1280px)" srcset="
+      <source
+        media="(min-width: 1280px)"
+        srcset="
           ./images/desktop/hero-girl-img-desktop.png   1x,
           ./images/desktop/hero-girl-img-desktop2x.png 2x
-        " />
-      <source media="(min-width: 768px)" srcset="
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
           ./images/tablet/hero-girl-img-tablet.png    1x,
           ./images/tablet/hero-girl-img-tablet@2x.png 2x
-        " />
-      <img class="img-girl animate__animated animate__slideInUp" src="./images/tablet/hero-girl-img-tablet.png"
-        alt="девушка" />
+        "
+      />
+      <img
+        class="img-girl animate__animated animate__slideInUp"
+        src="./images/tablet/hero-girl-img-tablet.png"
+        alt="девушка"
+      />
     </picture>
   </div>
 </section>
