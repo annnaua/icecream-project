@@ -1,6 +1,8 @@
 .btn-buy-menu {
   width: 100%;
   max-width: 300px;
+  margin: 26 auto 18;
+
   @media screen and (min-width: $desktop) {
     display: none;
   }
@@ -8,34 +10,34 @@
 
 .header-btn-buy {
   @extend %button;
-
+  height: 44px;
   background-color: $button-bg-white;
   color: $text-red;
-
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   &:hover,
   &:focus {
     background-color: $button-bg-white-hover;
   }
 }
 
-.btn-buy-menu {
-  margin: 26 auto 18;
-}
 .header-menu.active .header-btn-buy {
   @media screen and (max-width: 1279px) {
     display: block;
-  }
-}
-.header-btn-buy {
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 }
 
 .container-header {
   position: relative;
 }
-
+.header-container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 // HEADER BODY
 
 .header-body {
@@ -45,7 +47,9 @@
   align-items: center;
 
   height: 60px;
-
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
   @media screen and (min-width: $tablet) {
     height: 80px;
   }
@@ -56,6 +60,9 @@
 }
 
 .header {
+  @media screen and (max-width: 767px) {
+    padding: 10px 0;
+  }
   background-color: $bg-hero;
   position: fixed;
   left: 0;
@@ -66,8 +73,8 @@
   background-color: transparent;
 
   &-logo {
-    @media screen and (max-width: 1279px) {
-      margin-right: auto;
+    @media screen and (min-width: $tablet) and (max-width: 1279px) {
+      margin-right: 293px;
     }
   }
 
@@ -80,7 +87,9 @@
     z-index: 10;
 
     display: flex;
-
+    @media screen and (min-width: 1280px) {
+      margin-left: 175px;
+    }
     @media screen and (max-width: 1279px) {
       flex-direction: column;
       text-align: left;
@@ -103,12 +112,12 @@
     border-bottom: 1px solid $border-rose;
   }
 }
-.header:first-child {
-  @media screen and (max-width: 1279px) {
-    padding-top: 12px;
-    border-top: 1px solid $border-rose;
-  }
-}
+// .header:first-child {
+//   @media screen and (max-width: 1279px) {
+//     padding-top: 12px;
+//     border-top: 1px solid $border-rose;
+//   }
+// }
 
 // header menu active
 
@@ -143,6 +152,9 @@
   padding: 20px 20px;
   text-align: right;
   transform: translate(0);
+  @media screen and (max-width: 767px) {
+    width: 250px;
+  }
 }
 
 // links
@@ -165,6 +177,8 @@
 
 // burger
 .header-btn-burger {
+  padding: 25px 0 25px 25px;
+
   @media screen and (min-width: $tablet) {
     margin-right: 32px;
   }
@@ -346,7 +360,6 @@
   @media screen and (min-width: $desktop) {
     margin-left: 229px;
   }
-
 }
 
 .hero-text {
@@ -363,7 +376,6 @@
     margin-bottom: 20px;
   }
 }
-
 
 .hero-wrapper-number {
   display: none;
