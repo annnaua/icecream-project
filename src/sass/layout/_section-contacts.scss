@@ -76,7 +76,7 @@
   }
 }
 
-.city-wrap-title {
+.contacts-list-title {
   margin-bottom: 8px;
 
   color: $title-black;
@@ -94,7 +94,7 @@
   }
 }
 
-.city-wrap-text {
+.contacts-list-text {
   max-width: 179px;
 
   color: $text-rose-gray;
@@ -115,32 +115,32 @@
   }
 }
 
-.work-wrap {
+.work-list {
   padding: 24px 0;
-  margin: 24px 0px;
+  margin: 24px 0;
 
   border-top: 1px solid $border-gray;
   border-bottom: 1px solid $border-gray;
 
   @media screen and (min-width: $tablet) {
-    padding-top: 32px 0;
-    margin: 32px 0px;
+    padding: 32px 0;
+    margin: 32px 0;
   }
 }
 
-.work-title {
+.work-list-item:first-child {
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 12px;
+  }
+}
+
+.work-list-title {
   color: $text-black;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
-
-  &:not(:first-child) {
-    margin-top: 8px;
-
-    @media screen and (min-width: $tablet) {
-      margin-top: 12px;
-    }
-  }
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
@@ -151,7 +151,7 @@
   }
 }
 
-.work-text {
+.work-list-text {
   color: $text-rose;
   font-weight: 500;
   font-size: 12px;
@@ -166,7 +166,7 @@
   }
 }
 
-.contacts-list-link {
+.links-list-link {
   display: block;
 
   color: $text-rose-gray;
@@ -189,7 +189,7 @@
   }
 }
 
-.button-wrap {
+.button-list {
   display: flex;
   align-items: center;
 
@@ -208,13 +208,21 @@
   }
 }
 
-.contacts .button-red {
-  padding-right: 17px;
-  padding-left: 17px;
-
+.button-list-item {
   @media screen and (max-width: 767px) {
     margin-bottom: 10px;
   }
+
+  &:last-child {
+    @media screen and (min-width: $tablet) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.contacts .button-red {
+  padding-right: 17px;
+  padding-left: 17px;
 
   @media screen and (min-width: $tablet) {
     padding-right: 32px;
@@ -240,7 +248,6 @@
   padding-left: 32px;
 
   @media screen and (min-width: $tablet) {
-    margin-left: 15px;
     padding-right: 38px;
     padding-left: 38px;
   }
